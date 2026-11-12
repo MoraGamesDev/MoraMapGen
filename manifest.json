@@ -1,5 +1,6 @@
 {
-  "source_base_path": "E:/Unity_Projects/Nemesis/MoraMapGen_Documentation",
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
+  "source_base_path": "/Users/benmora/Documents/Unity Projects/Nemesis/MoraMapGen_Documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,6 +10,34 @@
           "relative_path": "index.json"
         }
       }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.Advanced.AreaAssignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.Advanced.AreaAssignment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.Advanced.AreaAssignment",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.Advanced.AreaAssignment.yml\" sourcestartlinenumber=\"1\">A request to assign an AreaDefinition to a specific area.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.Advanced.IAreaAssignmentOverride.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.Advanced.IAreaAssignmentOverride.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.Advanced.IAreaAssignmentOverride",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.Advanced.IAreaAssignmentOverride.yml\" sourcestartlinenumber=\"1\">Implement on a component attached to the MoraMapGen GameObject to override which AreaDefinitions are assigned to which areas.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -306,6 +335,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.BakedGridSpaceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.BakedGridSpaceExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.BakedGridSpaceExtensions",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.BakedGridSpaceExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods providing utility operations for BakedGridSpace instances.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoraGames.MapGen.BakedMap.yml",
       "output": {
         ".html": {
@@ -358,7 +401,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "MoraGames.MapGen.BakedMapPathExtensions",
-      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.BakedMapPathExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for A* pathfinding operations on BakedMap grid spaces.</p>\n"
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.BakedMapPathExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for point-to-point A* pathfinding between BakedMap grid spaces.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -404,6 +447,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.EdgeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.EdgeExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.EdgeExtensions",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.EdgeExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for converting an <xref href=\"MoraGames.MapGen.Edge\" data-throw-if-not-resolved=\"false\"></xref> into world-space facing directions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoraGames.MapGen.EnvType.yml",
       "output": {
         ".html": {
@@ -415,6 +472,20 @@
       "IsMRef": true,
       "Title": "MoraGames.MapGen.EnvType",
       "Summary": "<p sourcefile=\"api/MoraGames.MapGen.EnvType.yml\" sourcestartlinenumber=\"1\">Defines the type of environment for a pixel of a tile blueprint, or the general type of the entire tile determined by the center pixel.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.GenerationSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.GenerationSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.GenerationSource",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.GenerationSource.yml\" sourcestartlinenumber=\"1\">This enum is used by the MoraMapGen component to specify which source should be used for generating the map.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -443,6 +514,118 @@
       "IsMRef": true,
       "Title": "MoraGames.MapGen.MoraMapGen",
       "Summary": "<p sourcefile=\"api/MoraGames.MapGen.MoraMapGen.yml\" sourcestartlinenumber=\"1\">Main MonoBehaviour component for generating procedural grid-based dungeon maps.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.ProceduralAreaAssignmentOverrides.AreaCriteria.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.ProceduralAreaAssignmentOverrides.AreaCriteria.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.ProceduralAreaAssignmentOverrides.AreaCriteria",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.ProceduralAreaAssignmentOverrides.AreaCriteria.yml\" sourcestartlinenumber=\"1\">The rule used to choose which area(s) an override applies to.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.ProceduralAreaAssignmentOverrides.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.ProceduralAreaAssignmentOverrides.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.ProceduralAreaAssignmentOverrides",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.ProceduralAreaAssignmentOverrides.yml\" sourcestartlinenumber=\"1\">Allows you to assign AreaDefinitions to rooms and corridors before the normal map gen process assigns them randomly. You can specify areas by criteria such as size, door count, or distance from another area.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.CorridorProceduralPropSpots.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.CorridorProceduralPropSpots.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.Props.MapGameObjectPlacement.CorridorProceduralPropSpots",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.PlacementAreas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.PlacementAreas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.Props.MapGameObjectPlacement.PlacementAreas",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.Props.MapGameObjectPlacement.PlacementAreas.yml\" sourcestartlinenumber=\"1\">Specifies which kinds of areas prefabs can be placed in.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.PlacementMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.PlacementMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.Props.MapGameObjectPlacement.PlacementMethod",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.Props.MapGameObjectPlacement.PlacementMethod.yml\" sourcestartlinenumber=\"1\">Specifies where inside the selected areas objects are placed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.RoomProceduralPropSpots.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.RoomProceduralPropSpots.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.Props.MapGameObjectPlacement.RoomProceduralPropSpots",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.SelectionPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.SelectionPolicy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.Props.MapGameObjectPlacement.SelectionPolicy",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.Props.MapGameObjectPlacement.SelectionPolicy.yml\" sourcestartlinenumber=\"1\">Determines how many objects are placed and how prefabs and areas are chosen.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.Props.MapGameObjectPlacement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.Props.MapGameObjectPlacement",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.Props.MapGameObjectPlacement.yml\" sourcestartlinenumber=\"1\">A <xref href=\"MoraGames.MapGen.Advanced.IMapGenPostProcess\" data-throw-if-not-resolved=\"false\"></xref> that lets you specify where to place arbitrary quantities of prefabs when the map is generated.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -513,6 +696,34 @@
       "IsMRef": true,
       "Title": "MoraGames.MapGen.Props.PropPlacement",
       "Summary": "<p sourcefile=\"api/MoraGames.MapGen.Props.PropPlacement.yml\" sourcestartlinenumber=\"1\">Component that handles prop placement as a post-processing step after map generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.Props.PropPlacementHelpers.PlacementPose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.Props.PropPlacementHelpers.PlacementPose.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.Props.PropPlacementHelpers.PlacementPose",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.Props.PropPlacementHelpers.PlacementPose.yml\" sourcestartlinenumber=\"1\">A fully resolved world-space pose for a prop.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.Props.PropPlacementHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.Props.PropPlacementHelpers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.Props.PropPlacementHelpers",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.Props.PropPlacementHelpers.yml\" sourcestartlinenumber=\"1\">Shared helpers for calculating and performing prop placement.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -628,6 +839,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoraGames.MapGen.TilemapAreaAssignmentOverrides.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoraGames.MapGen.TilemapAreaAssignmentOverrides.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MoraGames.MapGen.TilemapAreaAssignmentOverrides",
+      "Summary": "<p sourcefile=\"api/MoraGames.MapGen.TilemapAreaAssignmentOverrides.yml\" sourcestartlinenumber=\"1\">Assigns AreaDefinitions to the rooms and corridors containing specific Tilemap cells when generating from a Tilemap.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoraGames.MapGen.yml",
       "output": {
         ".html": {
@@ -649,6 +874,46 @@
         },
         ".json": {
           "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/area-assignment-overrides.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/area-assignment-overrides.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/area-assignment-overrides/create-your-own-area-assignment-overrides.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/area-assignment-overrides/create-your-own-area-assignment-overrides.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/area-assignment-overrides/procedural-area-assignment-overrides.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/area-assignment-overrides/procedural-area-assignment-overrides.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/area-assignment-overrides/tilemap-area-assignment-overrides.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/area-assignment-overrides/tilemap-area-assignment-overrides.html"
         }
       },
       "version": ""
@@ -685,6 +950,46 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/concepts/bakedmap.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/concepts/bakedmap.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/concepts/complex-floor.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/concepts/complex-floor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/concepts/generating-from-a-tilemap.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/concepts/generating-from-a-tilemap.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/concepts/graph-traversal.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/concepts/graph-traversal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/concepts/room-shapes.md",
       "output": {
         ".html": {
@@ -705,6 +1010,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/editor-overlays/area-finder.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/editor-overlays/area-finder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/editor-overlays/moramapgen-shortcuts.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/editor-overlays/moramapgen-shortcuts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/inspector-reference.md",
       "output": {
         ".html": {
@@ -719,16 +1044,6 @@
       "output": {
         ".html": {
           "relative_path": "docs/inspector-reference/advanced-settings.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/inspector-reference/concepts.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/inspector-reference/concepts.html"
         }
       },
       "version": ""
@@ -765,16 +1080,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/inspector-reference/troubleshooting.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/inspector-reference/troubleshooting.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "docs/overview.md",
       "output": {
         ".html": {
@@ -799,6 +1104,16 @@
       "output": {
         ".html": {
           "relative_path": "docs/post-processes/create-your-own-mapgen-post-processes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/post-processes/map-gameobject-placement.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/post-processes/map-gameobject-placement.html"
         }
       },
       "version": ""
@@ -957,11 +1272,51 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "docs/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/troubleshooting.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "images/MoraMapGen_Banner.png",
       "output": {
         "resource": {
           "relative_path": "images/MoraMapGen_Banner.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/area-assignment-overrides/procedural-area-assignment-overrides.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/area-assignment-overrides/procedural-area-assignment-overrides.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/area-assignment-overrides/tilemap-area-assignment-overrides-inspector.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/area-assignment-overrides/tilemap-area-assignment-overrides-inspector.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/area-assignment-overrides/tilemap-area-assignment-overrides-scene-view.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/area-assignment-overrides/tilemap-area-assignment-overrides-scene-view.png"
         }
       },
       "version": ""
@@ -1158,16 +1513,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/complete-setup/TileModuleDefinitionSOInspector.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "images/complete-setup/TileModuleDefinitionSOInspector.PNG"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "images/concepts/Area Definition Inspector.png",
       "output": {
         "resource": {
@@ -1198,10 +1543,90 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/concepts/area-options-inspector-2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/area-options-inspector-2.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/concepts/area-options-inspector.PNG",
       "output": {
         "resource": {
           "relative_path": "images/concepts/area-options-inspector.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/complex-floor/complex-corridor-corner.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/complex-floor/complex-corridor-corner.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/complex-floor/complex-corridor-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/complex-floor/complex-corridor-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/complex-floor/complex-corridor-inspector.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/complex-floor/complex-corridor-inspector.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/complex-floor/complex-corridor-straight.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/complex-floor/complex-corridor-straight.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/complex-floor/complex-corridor-t-intersection.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/complex-floor/complex-corridor-t-intersection.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/complex-floor/complex-corridor-x-intersection.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/complex-floor/complex-corridor-x-intersection.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/complex-floor/complex-floor-assigned.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/complex-floor/complex-floor-assigned.png"
         }
       },
       "version": ""
@@ -1278,6 +1703,186 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/concepts/tile-module-definitions-inspector-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tile-module-definitions-inspector-1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tile-module-definitions-inspector-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tile-module-definitions-inspector-2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/generate-from-tilemap-example.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/generate-from-tilemap-example.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/tilemap-assign-source-tilemap.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/tilemap-assign-source-tilemap.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/tilemap-bake-demo.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/tilemap-bake-demo.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/tilemap-components.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/tilemap-components.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/tilemap-edit-demo.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/tilemap-edit-demo.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/tilemap-generate-button.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/tilemap-generate-button.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/tilemap-generation-source.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/tilemap-generation-source.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/tilemap-palette-button.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/tilemap-palette-button.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/tilemap-palette-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/tilemap-palette-menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/tilemap-palette.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/tilemap-palette.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/concepts/tilemaps/tilemap-validation-highlight.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/concepts/tilemaps/tilemap-validation-highlight.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/editor-overlays/area-finder-overlay-access.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/editor-overlays/area-finder-overlay-access.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/editor-overlays/area-finder-overlay-demo.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/editor-overlays/area-finder-overlay-demo.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/editor-overlays/area-finder-overlay-enable.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/editor-overlays/area-finder-overlay-enable.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/editor-overlays/mapgen-shortcuts-enable.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/editor-overlays/mapgen-shortcuts-enable.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/editor-overlays/mapgen-shortcuts.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/editor-overlays/mapgen-shortcuts.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/favicon.ico",
       "output": {
         "resource": {
@@ -1292,6 +1897,16 @@
       "output": {
         "resource": {
           "relative_path": "images/generation-options/Generation Options.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/generation-options/Generation-source-tilemap.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/generation-options/Generation-source-tilemap.png"
         }
       },
       "version": ""
@@ -1798,6 +2413,86 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/post-processes/distribution-mode-biased.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/post-processes/distribution-mode-biased.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/post-processes/distribution-mode-normal.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/post-processes/distribution-mode-normal.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/post-processes/distribution-mode-shuffle.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/post-processes/distribution-mode-shuffle.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/post-processes/distribution-mode-uniform.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/post-processes/distribution-mode-uniform.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/post-processes/map-gameobject-placement-inspector.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/post-processes/map-gameobject-placement-inspector.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/post-processes/mapgameobjectplacement-target-quantity-of-each-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/post-processes/mapgameobjectplacement-target-quantity-of-each-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/post-processes/mapgameobjectplacement-target-quantity-per-area-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/post-processes/mapgameobjectplacement-target-quantity-per-area-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/post-processes/mapgameobjectplacement-target-quantity-total-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/post-processes/mapgameobjectplacement-target-quantity-total-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/post-processes/navmesh-agents.png",
       "output": {
         "resource": {
@@ -1968,6 +2663,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/settings/Misc-settings-section.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/settings/Misc-settings-section.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/settings/advanced-settings.PNG",
       "output": {
         "resource": {
@@ -2097,11 +2802,131 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-prop-density-area-definition.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-prop-density-area-definition.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-prop-density-area-options.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-prop-density-area-options.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-prop-density-master.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-prop-density-master.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-prop-placement-component.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-prop-placement-component.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-props-pivot-bad.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-props-pivot-bad.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-props-pivot-best.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-props-pivot-best.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-props-pivot-better.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-props-pivot-better.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-tile-module-edge-size-correct.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-tile-module-edge-size-correct.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-tile-module-edge-size-measurement.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-tile-module-edge-size-measurement.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-tile-module-edge-size-value.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-tile-module-edge-size-value.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/troubleshooting/troubleshooting-tile-module-edge-size-wrong.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/troubleshooting/troubleshooting-tile-module-edge-size-wrong.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "readme.md",
+      "output": {
+        ".html": {
+          "relative_path": "readme.html"
         }
       },
       "version": ""

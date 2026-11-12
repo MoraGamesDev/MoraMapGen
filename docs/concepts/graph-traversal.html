@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Graph Traversal | MoraMapGen </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Graph Traversal | MoraMapGen ">
+    
+    
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="MoraMapGen">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="graph-traversal">
+<h1 id="graph-traversal">Graph Traversal</h1>
+
+<p>A baked map layout can be viewed as two related graphs:</p>
+<ul>
+<li><strong>Grid-space graph:</strong> each tile or cell is a node, connected orthagonally to it's neighbors that can be reached from it. Walls block connection between neighboring tiles.</li>
+<li><strong>Area graph:</strong> each area (room or corridor) is a node. Areas are linked when they share connecting grid spaces. (Eg. A room is considered connected to a corridor when it has a door leading to it.)</li>
+</ul>
+<p>See the API documentation for the various related extension methods for complete info:</p>
+<ul>
+<li><a class="xref" href="../../api/MoraGames.MapGen.BakedAreaGraphExtensions.html">BakedAreaGraphExtensions</a></li>
+<li><a class="xref" href="../../api/MoraGames.MapGen.BakedMapGraphExtensions.html">BakedMapGraphExtensions</a></li>
+<li><a class="xref" href="../../api/MoraGames.MapGen.BakedMapPathExtensions.html">BakedMapPathExtensions</a></li>
+</ul>
+<h2 id="grid-space-graph-traversal">Grid-space Graph Traversal</h2>
+<p>With a reference to a <code>BakedMap</code> you can use the following extension methods:</p>
+<ul>
+<li><p><code>BakedMap.GetFarthestGridSpaces</code> gets a list of <code>BakedGridSpace</code> that are the farthest away from the reference <code>BakedGridSpace</code> and returns the distance in steps.</p>
+</li>
+<li><p><code>BakedMap.PickFarthestGridSpace</code> randomly picks a <code>BakedGridSpace</code> from those tied for farthest returned by <code>GetFarthestGridSpaces</code>.</p>
+</li>
+<li><p><code>BakedMap.GetFarthestAreasByGridDistance</code> gets a list of <code>BakedArea</code> that are the farthest from the reference area and returns their distance in grid steps.</p>
+</li>
+<li><p><code>BakedMap.PickFarthestAreaByGridDistance</code> randomly picks one of the areas tied for farthest by grid-space distance returned from <code>GetFarthestAreasByGridDistance</code>.</p>
+</li>
+<li><p><code>BakedMap.GetGridDistanceBetweenAreas</code> returns the number of grid steps from one area to another.</p>
+</li>
+<li><p><code>BakedMap.GetGridDistancesFromArea</code> gets a dictionary of the distance in connected grid steps from a specified <code>BakedArea</code> to every other <code>BakedGridSpace</code>.</p>
+</li>
+<li><p><code>BakedMap.GetGridDistancesFromSpace</code> gets a dictionary of the distance in connected grid steps from a specified <code>BakedGridSpace</code> to every other <code>BakedGridSpace</code>.</p>
+</li>
+<li><p><code>BakedMap.TryGetGridPathBetweenAreas</code> gets the shortest walkable path of <code>BakedGridSpace</code> between the two specified <code>BakedArea</code>.</p>
+</li>
+<li><p><code>BakedMap.Find2FarthestGridSpaces</code> finds the two grid spaces that are the farthest apart in the entire map.</p>
+</li>
+<li><p><code>BakedMap.TryGetGridSpacePath</code> gets the shortest walkable path of <code>BakedGridSpace</code> between the two specified grid positions (<code>Vector2Int</code> or <code>BakedGridSpace</code>).</p>
+</li>
+<li><p><code>BakedMap.GetGridDistance</code> gets the distance in grid steps between the two specified <code>BakedGridSpace</code>.</p>
+</li>
+</ul>
+<h2 id="area-graph-traversal">Area Graph Traversal</h2>
+<p>With a reference to a specific <code>BakedArea</code> you can use the following extension methods:</p>
+<ul>
+<li><p><code>BakedArea.GetImmediateGraphConnections</code> gets all of the rooms and corridors that are connected to this one.</p>
+</li>
+<li><p><code>BakedArea.GetFarthestAreas</code> gets a list of the farthest area(s) from this area and returns the distance in steps.</p>
+</li>
+<li><p><code>BakedArea.PickFarthestArea</code> randomly picks one of the tied farthest areas returned from <code>GetFarthestAreas</code>.</p>
+</li>
+<li><p><code>BakedArea.TryGetGraphToArea</code> gets the graph of connecting areas between two areas in the form of a sequential list of <code>BakedArea</code> one would need to traverse to get from area A to area B.</p>
+</li>
+<li><p><code>BakedArea.GetGraphDistanceToArea</code> returns an int representing the number of steps it takes to get from this area to a specified area. Each step is an area connection, not a grid space.</p>
+</li>
+<li><p><code>BakedArea.GetGraphDistancesFromArea</code> gets a dictionary of the distance in area connections to every other area from this area.</p>
+</li>
+</ul>
+<p>With a reference to the <code>BakedMap</code> you can use the following extension methods:</p>
+<ul>
+<li><code>Find2FarthestAreas</code> finds the two areas that are farthest apart in the entire map.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

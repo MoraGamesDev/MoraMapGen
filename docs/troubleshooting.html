@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Troubleshooting | MoraMapGen </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Troubleshooting | MoraMapGen ">
+    
+    
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="MoraMapGen">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="troubleshooting">Troubleshooting</h1>
+
+<h2 id="problems">Problems</h2>
+<ul>
+<li><a href="#my-generated-map-looks-like-this-clustered-modules">My generated map looks like this! (Clustered modules)</a></li>
+<li><a href="#my-props-arent-being-placed">My props aren't being placed</a></li>
+</ul>
+<h2 id="my-generated-map-looks-like-this-clustered-modules">My generated map looks like this! (Clustered modules)</h2>
+<p><img src="../images/troubleshooting/troubleshooting-tile-module-edge-size-wrong.png" alt="Wrong edge size"></p>
+<h3 id="solution">Solution</h3>
+<p>Likely your <code>Tile Module Edge Size</code> defined in your <code>AreaOptionsSO</code> asset does not match the module prefabs you are using.</p>
+<p><img src="../images/troubleshooting/troubleshooting-tile-module-edge-size-value.png" alt="Tile Module Edge Size setting"></p>
+<p>Check the size of your modules. In my example, my modules use a size of 3 units:</p>
+<p><img src="../images/troubleshooting/troubleshooting-tile-module-edge-size-measurement.png" alt="Module edge measurement"></p>
+<p>When set to the correct value for your modules, it should look correct:</p>
+<p><img src="../images/troubleshooting/troubleshooting-tile-module-edge-size-correct.png" alt="Correct edge size result"></p>
+<h2 id="my-props-arent-being-placed">My props aren't being placed</h2>
+<h3 id="solutions">Solutions</h3>
+<h4 id="1-missing-component">1. Missing component?</h4>
+<p>Ensure there is a <a href="post-processes/prop-placement/prop-placement-component.html">Prop Placement</a> component attached to the same GameObject as your <code>MoraMapGen</code> component.</p>
+<p><img src="../images/troubleshooting/troubleshooting-prop-placement-component.png" alt="Prop Placement component"></p>
+<h4 id="2-density-too-low">2. Density too low?</h4>
+<p>Check all of your <code>Prop Density Multipliers</code> and make sure none are set too low. Check these locations and set them to <code>1</code> as a test:</p>
+<ul>
+<li>On the <code>Prop Placement</code> component.</li>
+<li>On the <code>AreaOptionsSO</code> asset.</li>
+<li>On each of your <code>AreaDefinitionSO</code> assets.</li>
+</ul>
+<p><img src="../images/troubleshooting/troubleshooting-prop-density-master.png" alt="Prop Density Master"></p>
+<p><img src="../images/troubleshooting/troubleshooting-prop-density-area-options.png" alt="AreaOptions Prop Density"></p>
+<p><img src="../images/troubleshooting/troubleshooting-prop-density-area-definition.png" alt="AreaDefinitions Prop Density"></p>
+<p>Also make sure that you don't have any Prop Channel Density Multipliers set to 0 or a very low value.</p>
+<h4 id="3-too-much-collider-overlap">3. Too much collider overlap?</h4>
+<p>Check your prop prefab's pivot. If the pivot of the prefab is inside a collider, it is likely failing to place due to overlapping other colliders.</p>
+<p>This is bad. It will almost always fail due to colliding with the world, assuming your modules have colliders:</p>
+<p><img src="../images/troubleshooting/troubleshooting-props-pivot-bad.png" alt="Bad Prop pivot"></p>
+<p>By making sure the pivot is where you would expect the floor or wall to be (or whatever the prop will be attached to), it will be much less likely to collide with anything.</p>
+<p><img src="../images/troubleshooting/troubleshooting-props-pivot-better.png" alt="Better Prop pivot"></p>
+<p>Consider adding <a href="post-processes/prop-placement/prop-anchor-override.html">Prop Anchor Overrides</a> to your prop prefabs to specify where a prop should line up with a prop spot.</p>
+<p><img src="../images/troubleshooting/troubleshooting-props-pivot-best.png" alt="Best: Prop pivot overrides"></p>
+<p>See <a href="post-processes/prop-placement.html">Prop Placement</a> for more info.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

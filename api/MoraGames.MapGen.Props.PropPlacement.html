@@ -87,13 +87,17 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">PropPlacement</span></div>
+    <div class="level1"><span class="xref">Object</span></div>
+    <div class="level2"><span class="xref">Component</span></div>
+    <div class="level3"><span class="xref">Behaviour</span></div>
+    <div class="level4"><span class="xref">MonoBehaviour</span></div>
+    <div class="level5"><span class="xref">PropPlacement</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="MoraGames.MapGen.Advanced.IMapGenPostProcess.html">IMapGenPostProcess</a></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoraGames.html">MoraGames</a>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a>.<a class="xref" href="MoraGames.MapGen.Props.html">Props</a></h6>
+  <h6><strong>Namespace</strong>: <span class="xref">MoraGames</span>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a>.<a class="xref" href="MoraGames.MapGen.Props.html">Props</a></h6>
   <h6><strong>Assembly</strong>: MoraMapGen.Runtime.dll</h6>
   <h5 id="MoraGames_MapGen_Props_PropPlacement_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -104,22 +108,8 @@
 based on the Prop Categories in your Area Definitions and Tile Module Definitions. Handles required props, optional props,
 and always-spawn props with collision checking and variance.</p>
 </div>
-  <h3 id="constructors">Constructors
-</h3>
-
-
-  <a id="MoraGames_MapGen_Props_PropPlacement__ctor_" data-uid="MoraGames.MapGen.Props.PropPlacement.#ctor*"></a>
-  <h4 id="MoraGames_MapGen_Props_PropPlacement__ctor" data-uid="MoraGames.MapGen.Props.PropPlacement.#ctor">PropPlacement()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PropPlacement()</code></pre>
-  </div>
   <h3 id="methods">Methods
 </h3>
-
-
   <a id="MoraGames_MapGen_Props_PropPlacement_CheckIfOverlapping_" data-uid="MoraGames.MapGen.Props.PropPlacement.CheckIfOverlapping*"></a>
   <h4 id="MoraGames_MapGen_Props_PropPlacement_CheckIfOverlapping_UnityEngine_GameObject_System_Single_" data-uid="MoraGames.MapGen.Props.PropPlacement.CheckIfOverlapping(UnityEngine.GameObject,System.Single)">CheckIfOverlapping(GameObject, float)</h4>
   <div class="markdown level1 summary"><p>Checks if a newly placed prop overlaps with existing colliders beyond the tolerance.</p>
@@ -169,8 +159,6 @@ and always-spawn props with collision checking and variance.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Props_PropPlacement_GetAllColliders_" data-uid="MoraGames.MapGen.Props.PropPlacement.GetAllColliders*"></a>
   <h4 id="MoraGames_MapGen_Props_PropPlacement_GetAllColliders_UnityEngine_GameObject_" data-uid="MoraGames.MapGen.Props.PropPlacement.GetAllColliders(UnityEngine.GameObject)">GetAllColliders(GameObject)</h4>
   <div class="markdown level1 summary"><p>Gets all Collider components from a GameObject and its children.</p>
@@ -214,8 +202,6 @@ and always-spawn props with collision checking and variance.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Props_PropPlacement_GetEncapsulatingBounds_" data-uid="MoraGames.MapGen.Props.PropPlacement.GetEncapsulatingBounds*"></a>
   <h4 id="MoraGames_MapGen_Props_PropPlacement_GetEncapsulatingBounds_System_Collections_Generic_List_UnityEngine_Collider__" data-uid="MoraGames.MapGen.Props.PropPlacement.GetEncapsulatingBounds(System.Collections.Generic.List{UnityEngine.Collider})">GetEncapsulatingBounds(List&lt;Collider&gt;)</h4>
   <div class="markdown level1 summary"><p>Calculates an AABB that encapsulates all provided colliders.</p>
@@ -259,8 +245,6 @@ and always-spawn props with collision checking and variance.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Props_PropPlacement_GetPhase_" data-uid="MoraGames.MapGen.Props.PropPlacement.GetPhase*"></a>
   <h4 id="MoraGames_MapGen_Props_PropPlacement_GetPhase" data-uid="MoraGames.MapGen.Props.PropPlacement.GetPhase">GetPhase()</h4>
   <div class="markdown level1 summary"><p>Gets the post-processing phase for prop placement.</p>
@@ -286,8 +270,6 @@ and always-spawn props with collision checking and variance.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Props_PropPlacement_OnMapBaked_" data-uid="MoraGames.MapGen.Props.PropPlacement.OnMapBaked*"></a>
   <h4 id="MoraGames_MapGen_Props_PropPlacement_OnMapBaked_MoraGames_MapGen_BakedMap_" data-uid="MoraGames.MapGen.Props.PropPlacement.OnMapBaked(MoraGames.MapGen.BakedMap)">OnMapBaked(BakedMap)</h4>
   <div class="markdown level1 summary"><p>Called after map generation completes to place all props.</p>
@@ -315,8 +297,121 @@ and always-spawn props with collision checking and variance.</p>
       </tr>
     </tbody>
   </table>
-
-
+  <a id="MoraGames_MapGen_Props_PropPlacement_PlacePropWithVariance_" data-uid="MoraGames.MapGen.Props.PropPlacement.PlacePropWithVariance*"></a>
+  <h4 id="MoraGames_MapGen_Props_PropPlacement_PlacePropWithVariance_MoraGames_MapGen_BakedMap_MoraGames_MapGen_BakedArea_System_Random_System_Random_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_MoraGames_MapGen_Internal_Props_IPropSpot_MoraGames_MapGen_Props_PropRotationSettingsSO_System_Single_UnityEngine_GameObject__MoraGames_MapGen_Props_ProceduralPropSpotOffsetsSO_System_Single_" data-uid="MoraGames.MapGen.Props.PropPlacement.PlacePropWithVariance(MoraGames.MapGen.BakedMap,MoraGames.MapGen.BakedArea,System.Random,System.Random,UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion,MoraGames.MapGen.Internal.Props.IPropSpot,MoraGames.MapGen.Props.PropRotationSettingsSO,System.Single,UnityEngine.GameObject@,MoraGames.MapGen.Props.ProceduralPropSpotOffsetsSO,System.Single)">PlacePropWithVariance(BakedMap, BakedArea, Random, Random, GameObject, Vector3, Quaternion, IPropSpot, PropRotationSettingsSO, float, out GameObject, ProceduralPropSpotOffsetsSO, float)</h4>
+  <div class="markdown level1 summary"><p>Places a prop once, applying positional and rotational variance, and rejects the placement if it overlaps previously placed props.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PlacePropWithVariance(BakedMap context, BakedArea area, Random positionRng, Random rotationRng, GameObject propPrefab, Vector3 worldPosition, Quaternion rotation, IPropSpot spot, PropRotationSettingsSO rotationSettings, float overlapTolerance, out GameObject placedObject, ProceduralPropSpotOffsetsSO proceduralPropSpotOffsetsOverride = null, float varianceMultiplier = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.BakedMap.html">BakedMap</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The baked map being populated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.BakedArea.html">BakedArea</a></td>
+        <td><span class="parametername">area</span></td>
+        <td><p>The area the prop is placed in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">positionRng</span></td>
+        <td><p>The random number generator used for position variance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">rotationRng</span></td>
+        <td><p>The random number generator used for rotation variance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">propPrefab</span></td>
+        <td><p>The prefab to place. If null, the spot is used and nothing is instantiated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">worldPosition</span></td>
+        <td><p>The world position to place the prop at before variance is applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>The world rotation to place the prop with before variance is applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IPropSpot</span></td>
+        <td><span class="parametername">spot</span></td>
+        <td><p>The prop spot being used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.Props.PropRotationSettingsSO.html">PropRotationSettingsSO</a></td>
+        <td><span class="parametername">rotationSettings</span></td>
+        <td><p>The settings that define random rotation variance to apply.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">overlapTolerance</span></td>
+        <td><p>The amount of collider overlap allowed with previously placed props and other pre-existing colliders.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">placedObject</span></td>
+        <td><p>The placed prop instance, or null if placement failed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.Props.ProceduralPropSpotOffsetsSO.html">ProceduralPropSpotOffsetsSO</a></td>
+        <td><span class="parametername">proceduralPropSpotOffsetsOverride</span></td>
+        <td><p>Optional offsets that replace the default procedural prop spot offsets.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">varianceMultiplier</span></td>
+        <td><p>A multiplier applied to the amount of variance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if the prop was placed; false if it overlapped too much and was discarded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="MoraGames_MapGen_Props_PropPlacement_Reset_" data-uid="MoraGames.MapGen.Props.PropPlacement.Reset*"></a>
   <h4 id="MoraGames_MapGen_Props_PropPlacement_Reset" data-uid="MoraGames.MapGen.Props.PropPlacement.Reset">Reset()</h4>
   <div class="markdown level1 summary"><p>Resets the prop placement state when the map is cleared.</p>
@@ -326,6 +421,127 @@ and always-spawn props with collision checking and variance.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
   </div>
+  <a id="MoraGames_MapGen_Props_PropPlacement_TryPlacePropWithVariance_" data-uid="MoraGames.MapGen.Props.PropPlacement.TryPlacePropWithVariance*"></a>
+  <h4 id="MoraGames_MapGen_Props_PropPlacement_TryPlacePropWithVariance_MoraGames_MapGen_BakedMap_MoraGames_MapGen_BakedArea_System_Random_System_Random_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_MoraGames_MapGen_Internal_Props_IPropSpot_MoraGames_MapGen_Props_PropRotationSettingsSO_System_Single_UnityEngine_GameObject__MoraGames_MapGen_Props_ProceduralPropSpotOffsetsSO_System_Int32_System_Single_" data-uid="MoraGames.MapGen.Props.PropPlacement.TryPlacePropWithVariance(MoraGames.MapGen.BakedMap,MoraGames.MapGen.BakedArea,System.Random,System.Random,UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion,MoraGames.MapGen.Internal.Props.IPropSpot,MoraGames.MapGen.Props.PropRotationSettingsSO,System.Single,UnityEngine.GameObject@,MoraGames.MapGen.Props.ProceduralPropSpotOffsetsSO,System.Int32,System.Single)">TryPlacePropWithVariance(BakedMap, BakedArea, Random, Random, GameObject, Vector3, Quaternion, IPropSpot, PropRotationSettingsSO, float, out GameObject, ProceduralPropSpotOffsetsSO, int, float)</h4>
+  <div class="markdown level1 summary"><p>Attempts to place a prop several times, reducing the positional and rotational variance with each failed attempt.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryPlacePropWithVariance(BakedMap context, BakedArea area, Random positionRng, Random rotationRng, GameObject propPrefab, Vector3 worldPosition, Quaternion rotation, IPropSpot spot, PropRotationSettingsSO rotationSettings, float overlapTolorance, out GameObject placedObject, ProceduralPropSpotOffsetsSO proceduralPropSpotOffsetsOverride = null, int maxTries = 10, float offsetMultiplier = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.BakedMap.html">BakedMap</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The baked map being populated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.BakedArea.html">BakedArea</a></td>
+        <td><span class="parametername">area</span></td>
+        <td><p>The area the prop is placed in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">positionRng</span></td>
+        <td><p>The random number generator used for position variance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">rotationRng</span></td>
+        <td><p>The random number generator used for rotation variance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">propPrefab</span></td>
+        <td><p>The prefab to place. If null, the spot is used and nothing is instantiated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">worldPosition</span></td>
+        <td><p>The world position to place the prop at before variance is applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>The world rotation to place the prop with before variance is applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IPropSpot</span></td>
+        <td><span class="parametername">spot</span></td>
+        <td><p>The prop spot being used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.Props.PropRotationSettingsSO.html">PropRotationSettingsSO</a></td>
+        <td><span class="parametername">rotationSettings</span></td>
+        <td><p>The settings that define random rotation variance to apply.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">overlapTolorance</span></td>
+        <td><p>The amount of collider overlap allowed with previously placed props and other pre-existing colliders.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">placedObject</span></td>
+        <td><p>The placed prop instance, or null if placement failed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.Props.ProceduralPropSpotOffsetsSO.html">ProceduralPropSpotOffsetsSO</a></td>
+        <td><span class="parametername">proceduralPropSpotOffsetsOverride</span></td>
+        <td><p>Optional offsets that replace the default procedural prop spot offsets.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">maxTries</span></td>
+        <td><p>The maximum number of placement attempts.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">offsetMultiplier</span></td>
+        <td><p>A multiplier applied to the amount of variance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if the prop was placed; false if every attempt failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MoraGames.MapGen.Advanced.IMapGenPostProcess.html">IMapGenPostProcess</a>
@@ -336,10 +552,6 @@ and always-spawn props with collision checking and variance.</p>
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

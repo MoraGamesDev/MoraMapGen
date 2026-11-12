@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>BakedMap | MoraMapGen </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="BakedMap | MoraMapGen ">
+    
+    
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="MoraMapGen">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="bakedmap">
+<h1 id="bakedmap">BakedMap</h1>
+
+<p>When a map is generated, it is then stored as a <code>BakedMap</code> object that you can access at runtime to do things like query what room a player is in, check whether a location is inside a certain area, and use <a href="graph-traversal.html">graph-traversal</a> helpers to find the shortest path between two points or find the farthest position from a location.</p>
+<h2 id="accessing-the-bakedmap">Accessing the BakedMap</h2>
+<p>With a reference to your MoraMapGen component, you can access the BakedMap via <code>MoraMapGen.BakedMap</code>. That is the current baked map. It is <code>null</code> before a successful map generation or after clearing the map.</p>
+<p>You can add a listener to <code>OnBakedMapReady</code> to get the newly created BakedMap whenever a map is generated.</p>
+<pre><code class="lang-csharp">using MoraGames.MapGen;
+using UnityEngine;
+
+public class BakedMapExample : MonoBehaviour
+{
+    [SerializeField] private MoraMapGen _mapGenerator;
+
+    void OnEnable()
+    {
+        _mapGenerator.OnBakedMapReady.AddListener(HandleMapBaked);
+    }
+
+    void OnDisable()
+    {
+        _mapGenerator.OnBakedMapReady.RemoveListener(HandleMapBaked);
+    }
+
+    private void HandleMapBaked(BakedMap bakedMap)
+    {
+        int numRooms = bakedMap.Rooms.Count;
+        int numCorridors = bakedMap.Corridors.Count;
+        Vector2Int dimensions = bakedMap.GridDimensions;
+        
+        Debug.Log($&quot;Generated {numRooms} rooms and {numCorridors} corridors. Map dimensions: {dimensions}&quot;);
+    }
+}
+</code></pre>
+<p>If you need to get a reference to an already generated map (whether because it was generated in editor, or at a previous moment at runtime) use <code>MoraMapGen.BakedMap</code> to access the BakedMap. Regeneration or <code>ClearMap</code> invalidates the previous BakedMap, so be careful about caching a reference to it. You can check if the map has been baked with <code>MoraMapGen.IsMapBaked</code>.</p>
+<h2 id="usage">Usage</h2>
+<p>See the API documentation for <a class="xref" href="../../api/MoraGames.MapGen.BakedMap.html">BakedMap</a> for the complete interface.</p>
+<p>The <code>BakedMap</code> provides lists of <code>BakedArea</code> for all of it's rooms and corridors via <code>BakedMap.Rooms</code> and <code>BakedMap.Corridors</code>. It also has lots of helper methods for finding specific areas, areas that match a certain criteria, etc.</p>
+<p>See also <a href="graph-traversal.html">Graph Traversal</a> for getting areas by distance and connections.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

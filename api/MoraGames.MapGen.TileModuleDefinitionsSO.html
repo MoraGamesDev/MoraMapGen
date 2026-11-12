@@ -87,30 +87,43 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">TileModuleDefinitionsSO</span></div>
+    <div class="level1"><span class="xref">Object</span></div>
+    <div class="level2"><span class="xref">ScriptableObject</span></div>
+    <div class="level3"><span class="xref">TileModuleDefinitionsSO</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoraGames.html">MoraGames</a>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a></h6>
+  <h6><strong>Namespace</strong>: <span class="xref">MoraGames</span>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a></h6>
   <h6><strong>Assembly</strong>: MoraMapGen.Runtime.dll</h6>
   <h5 id="MoraGames_MapGen_TileModuleDefinitionsSO_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TileModuleDefinitionsSO : ScriptableObject</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-</h3>
-
-
-  <a id="MoraGames_MapGen_TileModuleDefinitionsSO__ctor_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.#ctor*"></a>
-  <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO__ctor" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.#ctor">TileModuleDefinitionsSO()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TileModuleDefinitionsSO()</code></pre>
+    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;New Tile Module Definitions SO&quot;, menuName = &quot;MoraMapGen/Tile Module Definitions&quot;)]
+public class TileModuleDefinitionsSO : ScriptableObject</code></pre>
   </div>
   <h3 id="properties">Properties
 </h3>
-
-
+  <a id="MoraGames_MapGen_TileModuleDefinitionsSO_DisableFloorAUnderWalls_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.DisableFloorAUnderWalls*"></a>
+  <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_DisableFloorAUnderWalls" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.DisableFloorAUnderWalls">DisableFloorAUnderWalls</h4>
+  <div class="markdown level1 summary"><p>Gets whether Floor A modules should be omitted from wall subtiles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisableFloorAUnderWalls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_PropCategories_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.PropCategories*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_PropCategories" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.PropCategories">PropCategories</h4>
   <div class="markdown level1 summary"><p>Prop placement categories and definitions for areas using these modules.</p>
@@ -137,8 +150,6 @@
   </table>
   <h3 id="methods">Methods
 </h3>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandByType_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandByType*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandByType_MoraGames_MapGen_Internal_ModuleType_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandByType(MoraGames.MapGen.Internal.ModuleType)">GetRandByType(ModuleType)</h4>
   <div class="markdown level1 summary"><p>Gets a random module prefab of the specified type.</p>
@@ -182,8 +193,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandDoor_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandDoor*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandDoor_MoraGames_MapGen_Internal_DoorPlacementMode_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandDoor(MoraGames.MapGen.Internal.DoorPlacementMode)">GetRandDoor(DoorPlacementMode)</h4>
   <div class="markdown level1 summary"><p>Gets a random door module based on the specified placement mode.</p>
@@ -227,8 +236,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandExteriorCeiling_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandExteriorCeiling*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandExteriorCeiling" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandExteriorCeiling">GetRandExteriorCeiling()</h4>
   <div class="markdown level1 summary"><p>Gets a random exterior ceiling module prefab (visible from above).</p>
@@ -254,8 +261,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandFloorA_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandFloorA*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandFloorA" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandFloorA">GetRandFloorA()</h4>
   <div class="markdown level1 summary"><p>Gets a random Floor A module prefab (used in rooms and corridor edges).</p>
@@ -281,8 +286,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandFloorB_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandFloorB*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandFloorB" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandFloorB">GetRandFloorB()</h4>
   <div class="markdown level1 summary"><p>Gets a random Floor B module prefab (used in corridor paths and room entrances).</p>
@@ -308,8 +311,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandHalfDoorFrame_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandHalfDoorFrame*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandHalfDoorFrame" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandHalfDoorFrame">GetRandHalfDoorFrame()</h4>
   <div class="markdown level1 summary"><p>Gets a random half door frame module prefab.</p>
@@ -335,8 +336,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandHalfDoorPanel_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandHalfDoorPanel*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandHalfDoorPanel" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandHalfDoorPanel">GetRandHalfDoorPanel()</h4>
   <div class="markdown level1 summary"><p>Gets a random half door panel module prefab.</p>
@@ -362,8 +361,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandInteriorCeiling_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandInteriorCeiling*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandInteriorCeiling" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandInteriorCeiling">GetRandInteriorCeiling()</h4>
   <div class="markdown level1 summary"><p>Gets a random interior ceiling module prefab (visible from inside).</p>
@@ -389,8 +386,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandWallCornerInside_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandWallCornerInside*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandWallCornerInside" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandWallCornerInside">GetRandWallCornerInside()</h4>
   <div class="markdown level1 summary"><p>Gets a random inside corner wall module prefab (convex corners).</p>
@@ -416,8 +411,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandWallCornerOutside_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandWallCornerOutside*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandWallCornerOutside" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandWallCornerOutside">GetRandWallCornerOutside()</h4>
   <div class="markdown level1 summary"><p>Gets a random outside corner wall module prefab (concave corners).</p>
@@ -443,8 +436,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandWallStraight_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandWallStraight*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandWallStraight" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandWallStraight">GetRandWallStraight()</h4>
   <div class="markdown level1 summary"><p>Gets a random straight wall module prefab.</p>
@@ -470,8 +461,6 @@
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandWholeDoor_" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandWholeDoor*"></a>
   <h4 id="MoraGames_MapGen_TileModuleDefinitionsSO_GetRandWholeDoor" data-uid="MoraGames.MapGen.TileModuleDefinitionsSO.GetRandWholeDoor">GetRandWholeDoor()</h4>
   <div class="markdown level1 summary"><p>Gets a random whole door module prefab (frame and panel combined).</p>
@@ -503,10 +492,6 @@
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

@@ -89,31 +89,7 @@
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">MapGenRandom</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoraGames.html">MoraGames</a>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a>.<a class="xref" href="MoraGames.MapGen.Advanced.html">Advanced</a>.<a class="xref" href="MoraGames.MapGen.Advanced.RNG.html">RNG</a></h6>
+  <h6><strong>Namespace</strong>: <span class="xref">MoraGames</span>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a>.<a class="xref" href="MoraGames.MapGen.Advanced.html">Advanced</a>.<a class="xref" href="MoraGames.MapGen.Advanced.RNG.html">RNG</a></h6>
   <h6><strong>Assembly</strong>: MoraMapGen.Runtime.dll</h6>
   <h5 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -126,8 +102,6 @@ Initialize with Init(seed) before first use, or it will auto-initialize with see
 </div>
   <h3 id="properties">Properties
 </h3>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UnityValue_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UnityValue*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UnityValue" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UnityValue">UnityValue</h4>
   <div class="markdown level1 summary"><p>Used to identify deliberate uses of Unity's Randomness.</p>
@@ -154,17 +128,15 @@ Initialize with Init(seed) before first use, or it will auto-initialize with see
   </table>
   <h3 id="methods">Methods
 </h3>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedPick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedPick*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedPick__1_System_Random_System_Collections_Generic_IList___0__System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedPick``1(System.Random,System.Collections.Generic.IList{``0},System.Single,System.Boolean)">BiasedPick&lt;T&gt;(Random, IList&lt;T&gt;, float, bool)</h4>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedPick__1_System_Random_System_Collections_Generic_IReadOnlyList___0__System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedPick``1(System.Random,System.Collections.Generic.IReadOnlyList{``0},System.Single,System.Boolean)">BiasedPick&lt;T&gt;(Random, IReadOnlyList&lt;T&gt;, float, bool)</h4>
   <div class="markdown level1 summary"><p>Randomly picks an item from a list using an exponential distribution
 where the first item in the list is the most likely to be selected, and items are exponentially less likely to be selected the farther down the list they are.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T BiasedPick&lt;T&gt;(Random rng, IList&lt;T&gt; list, float biasStrength = 3, bool flipBias = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T BiasedPick&lt;T&gt;(Random rng, IReadOnlyList&lt;T&gt; list, float biasStrength = 3, bool flipBias = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -183,7 +155,7 @@ where the first item in the list is the most likely to be selected, and items ar
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
         <td><span class="parametername">list</span></td>
         <td><p>The list of items to pick from.</p>
 </td>
@@ -235,17 +207,15 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedPick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedPick*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedPick__1_System_String_System_Collections_Generic_IList___0__System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedPick``1(System.String,System.Collections.Generic.IList{``0},System.Single,System.Boolean)">BiasedPick&lt;T&gt;(string, IList&lt;T&gt;, float, bool)</h4>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedPick__1_System_String_System_Collections_Generic_IReadOnlyList___0__System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedPick``1(System.String,System.Collections.Generic.IReadOnlyList{``0},System.Single,System.Boolean)">BiasedPick&lt;T&gt;(string, IReadOnlyList&lt;T&gt;, float, bool)</h4>
   <div class="markdown level1 summary"><p>Randomly picks an item from a list using an exponential distribution
 where the first item in the list is the most likely to be selected, and items are exponentially less likely to be selected the farther down the list they are.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T BiasedPick&lt;T&gt;(string key, IList&lt;T&gt; list, float biasStrength = 3, bool flipBias = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T BiasedPick&lt;T&gt;(string key, IReadOnlyList&lt;T&gt; list, float biasStrength = 3, bool flipBias = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -264,7 +234,7 @@ where the first item in the list is the most likely to be selected, and items ar
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
         <td><span class="parametername">list</span></td>
         <td><p>The list of items to pick from.</p>
 </td>
@@ -316,8 +286,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedRange_System_Random_System_Int32_System_Int32_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedRange(System.Random,System.Int32,System.Int32,System.Single,System.Boolean)">BiasedRange(Random, int, int, float, bool)</h4>
   <div class="markdown level1 summary"><p>Generates a biased random integer within a range using an exponential distribution.</p>
@@ -385,8 +353,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedRange_System_Random_System_Single_System_Single_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedRange(System.Random,System.Single,System.Single,System.Single,System.Boolean)">BiasedRange(Random, float, float, float, bool)</h4>
   <div class="markdown level1 summary"><p>Generates a biased random float within a range using an exponential distribution.</p>
@@ -454,8 +420,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedRange_System_String_System_Int32_System_Int32_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedRange(System.String,System.Int32,System.Int32,System.Single,System.Boolean)">BiasedRange(string, int, int, float, bool)</h4>
   <div class="markdown level1 summary"><p>Generates a biased random integer within a range using the specified seed key.</p>
@@ -523,8 +487,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedRange_System_String_System_Single_System_Single_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedRange(System.String,System.Single,System.Single,System.Single,System.Boolean)">BiasedRange(string, float, float, float, bool)</h4>
   <div class="markdown level1 summary"><p>Generates a biased random float within a range using the specified seed key.</p>
@@ -592,8 +554,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedValue01_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedValue01*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_BiasedValue01_System_Random_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.BiasedValue01(System.Random,System.Single,System.Boolean)">BiasedValue01(Random, float, bool)</h4>
   <div class="markdown level1 summary"><p>Generates a biased random value in [0, 1] using an exponential distribution.</p>
@@ -649,8 +609,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Chance_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Chance*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Chance_System_Random_System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Chance(System.Random,System.Single)">Chance(Random, float)</h4>
   <div class="markdown level1 summary"><p>Returns true with the specified probability.</p>
@@ -700,8 +658,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Chance_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Chance*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Chance_System_String_System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Chance(System.String,System.Single)">Chance(string, float)</h4>
   <div class="markdown level1 summary"><p>Returns true with the specified probability using the specified seed key.</p>
@@ -751,8 +707,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_GetRng_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.GetRng*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_GetRng_System_String_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.GetRng(System.String)">GetRng(string)</h4>
   <div class="markdown level1 summary"><p>Gets a seeded Random instance for the specified key.</p>
@@ -796,8 +750,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_GetTotalWeight_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.GetTotalWeight*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_GetTotalWeight__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Single__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.GetTotalWeight``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">GetTotalWeight&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, float&gt;)</h4>
   <div class="markdown level1 summary"><p>Calculates the sum of all weights in a collection.</p>
@@ -863,8 +815,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_GetWeightedOption_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.GetWeightedOption*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_GetWeightedOption__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Single__System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.GetWeightedOption``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single},System.Single)">GetWeightedOption&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, float&gt;, float)</h4>
   <div class="markdown level1 summary"><p>Selects an element from a collection based on a specific weight threshold.</p>
@@ -936,8 +886,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_GetWeightedRandom_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.GetWeightedRandom*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_GetWeightedRandom__1_System_Random_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Single__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.GetWeightedRandom``1(System.Random,System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">GetWeightedRandom&lt;T&gt;(Random, IEnumerable&lt;T&gt;, Func&lt;T, float&gt;)</h4>
   <div class="markdown level1 summary"><p>Selects a random element from a collection based on weighted probabilities using a specified RNG.</p>
@@ -1009,8 +957,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_GetWeightedRandom_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.GetWeightedRandom*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_GetWeightedRandom__1_System_String_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Single__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.GetWeightedRandom``1(System.String,System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single})">GetWeightedRandom&lt;T&gt;(string, IEnumerable&lt;T&gt;, Func&lt;T, float&gt;)</h4>
   <div class="markdown level1 summary"><p>Selects a random element from a collection based on weighted probabilities using a specified seed key.</p>
@@ -1082,8 +1028,6 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Init_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Init*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Init_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Init(System.Int32)">Init(int)</h4>
   <div class="markdown level1 summary"><p>Initializes the random system with the specified seed.</p>
@@ -1111,10 +1055,8 @@ The larger the value, the stronger the bias towards picking results at the biase
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalPick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalPick*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalPick__1_System_Random_System_Collections_Generic_IList___0__System_Single_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalPick``1(System.Random,System.Collections.Generic.IList{``0},System.Single,System.Int32)">NormalPick&lt;T&gt;(Random, IList&lt;T&gt;, float, int)</h4>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalPick__1_System_Random_System_Collections_Generic_IReadOnlyList___0__System_Single_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalPick``1(System.Random,System.Collections.Generic.IReadOnlyList{``0},System.Single,System.Int32)">NormalPick&lt;T&gt;(Random, IReadOnlyList&lt;T&gt;, float, int)</h4>
   <div class="markdown level1 summary"><p>Randomly picks an item from a list using a normal (Gaussian) distribution.
 Items in the middle of the list are more likely to be selected,
 and items at either end of the list are less likely to be selected.</p>
@@ -1122,7 +1064,7 @@ and items at either end of the list are less likely to be selected.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T NormalPick&lt;T&gt;(Random rng, IList&lt;T&gt; list, float spreadFactor = 0.2, int maxRerolls = 10)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T NormalPick&lt;T&gt;(Random rng, IReadOnlyList&lt;T&gt; list, float spreadFactor = 0.2, int maxRerolls = 10)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1141,7 +1083,7 @@ and items at either end of the list are less likely to be selected.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
         <td><span class="parametername">list</span></td>
         <td><p>The list of items to pick from.</p>
 </td>
@@ -1195,10 +1137,8 @@ After this limit is reached, the result is clamped into the range.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalPick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalPick*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalPick__1_System_String_System_Collections_Generic_IList___0__System_Single_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalPick``1(System.String,System.Collections.Generic.IList{``0},System.Single,System.Int32)">NormalPick&lt;T&gt;(string, IList&lt;T&gt;, float, int)</h4>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalPick__1_System_String_System_Collections_Generic_IReadOnlyList___0__System_Single_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalPick``1(System.String,System.Collections.Generic.IReadOnlyList{``0},System.Single,System.Int32)">NormalPick&lt;T&gt;(string, IReadOnlyList&lt;T&gt;, float, int)</h4>
   <div class="markdown level1 summary"><p>Randomly picks an item from a list using a normal (Gaussian) distribution.
 Items in the middle of the list are more likely to be selected,
 and items at either end of the list are less likely to be selected.</p>
@@ -1206,7 +1146,7 @@ and items at either end of the list are less likely to be selected.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T NormalPick&lt;T&gt;(string key, IList&lt;T&gt; list, float spreadFactor = 0.2, int maxRerolls = 10)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T NormalPick&lt;T&gt;(string key, IReadOnlyList&lt;T&gt; list, float spreadFactor = 0.2, int maxRerolls = 10)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1225,7 +1165,7 @@ and items at either end of the list are less likely to be selected.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
         <td><span class="parametername">list</span></td>
         <td><p>The list of items to pick from.</p>
 </td>
@@ -1279,8 +1219,6 @@ After this limit is reached, the result is clamped into the range.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalRange_System_Random_System_Int32_System_Int32_System_Single_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalRange(System.Random,System.Int32,System.Int32,System.Single,System.Int32)">NormalRange(Random, int, int, float, int)</h4>
   <div class="markdown level1 summary"><p>Generates an integer sampled from a normal (Gaussian) distribution within a given range.</p>
@@ -1364,8 +1302,6 @@ int wideSpread = Normal(rng, 0, 100, spreadFactor: 1.0f);
 
 // Faster but potentially less accurate (limits rerolls)
 int fastSample = Normal(rng, 0, 100, spreadFactor: 0.5f, maxRerolls: 2);</code></pre>
-
-
 
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalRange_System_Random_System_Single_System_Single_System_Single_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalRange(System.Random,System.Single,System.Single,System.Single,System.Int32)">NormalRange(Random, float, float, float, int)</h4>
@@ -1451,8 +1387,6 @@ float wideSpread = Normal(rng, 0f, 100f, spreadFactor: 1.0f);
 // Faster but potentially less accurate (limits rerolls)
 float fastSample = Normal(rng, 0f, 100f, spreadFactor: 0.5f, maxRerolls: 2);</code></pre>
 
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalRange_System_String_System_Int32_System_Int32_System_Single_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalRange(System.String,System.Int32,System.Int32,System.Single,System.Int32)">NormalRange(string, int, int, float, int)</h4>
   <div class="markdown level1 summary"><p>Generates an integer sampled from a normal (Gaussian) distribution within a given range.</p>
@@ -1536,8 +1470,6 @@ int wideSpread = Normal(key, 0, 100, spreadFactor: 1.0f);
 
 // Faster but potentially less accurate (limits rerolls)
 int fastSample = Normal(key, 0, 100, spreadFactor: 0.5f, maxRerolls: 2);</code></pre>
-
-
 
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalRange_System_String_System_Single_System_Single_System_Single_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalRange(System.String,System.Single,System.Single,System.Single,System.Int32)">NormalRange(string, float, float, float, int)</h4>
@@ -1623,8 +1555,6 @@ float wideSpread = NormalRange(key, 0f, 100f, spreadFactor: 1.0f);
 // Faster but potentially less accurate (limits rerolls)
 float fastSample = NormalRange(key, 0f, 100f, spreadFactor: 0.5f, maxRerolls: 2);</code></pre>
 
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalValue_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalValue*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalValue_System_Random_System_Single_System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalValue(System.Random,System.Single,System.Single)">NormalValue(Random, float, float)</h4>
   <div class="markdown level1 summary"><p>Generates a random float sampled from a normal (Gaussian) distribution
@@ -1698,8 +1628,6 @@ float z = Normal(rng);
 
 // Sample heights around 170 cm with ~10 cm variation
 float height = Normal(rng, mean: 170f, stdDev: 10f);</code></pre>
-
-
 
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalValue_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalValue*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalValue_System_String_System_Single_System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalValue(System.String,System.Single,System.Single)">NormalValue(string, float, float)</h4>
@@ -1775,16 +1703,72 @@ float z = Normal(key);
 // Sample heights around 170 cm with ~10 cm variation
 float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
 
-
-
+  <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalValue01_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalValue01*"></a>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_NormalValue01_System_Random_System_Single_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.NormalValue01(System.Random,System.Single,System.Int32)">NormalValue01(Random, float, int)</h4>
+  <div class="markdown level1 summary"><p>Generates a random value in [0, 1] using a normal distribution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float NormalValue01(Random rng, float spreadFactor, int maxRerolls = 10)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">rng</span></td>
+        <td><p>The random number generator to use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">spreadFactor</span></td>
+        <td><p>Controls the spread of the distribution relative to the range.<br>
+A smaller value makes results cluster tightly around the mean,<br>
+while a larger value increases the likelihood of results near the extremes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">maxRerolls</span></td>
+        <td><p>The maximum number of times to resample if the generated value falls outside the range.<br>
+After this limit is reached, the result is clamped into the range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>A biased random float in [0, 1].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick__1_System_Random_MoraGames_MapGen_Advanced_RNG_DistributionMode_System_Collections_Generic_IList___0__System_Single_System_Int32_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick``1(System.Random,MoraGames.MapGen.Advanced.RNG.DistributionMode,System.Collections.Generic.IList{``0},System.Single,System.Int32,System.Single,System.Boolean)">Pick&lt;T&gt;(Random, DistributionMode, IList&lt;T&gt;, float, int, float, bool)</h4>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick__1_System_Random_MoraGames_MapGen_Advanced_RNG_DistributionMode_System_Collections_Generic_IReadOnlyList___0__System_Single_System_Int32_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick``1(System.Random,MoraGames.MapGen.Advanced.RNG.DistributionMode,System.Collections.Generic.IReadOnlyList{``0},System.Single,System.Int32,System.Single,System.Boolean)">Pick&lt;T&gt;(Random, DistributionMode, IReadOnlyList&lt;T&gt;, float, int, float, bool)</h4>
   <div class="markdown level1 summary"><p>Picks a random element from a list using the specified distribution mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Pick&lt;T&gt;(Random rng, DistributionMode mode, IList&lt;T&gt; list, float normalSpreadFactor = 0.2, int maxRerolls = 10, float biasStrength = 3, bool flipBias = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T Pick&lt;T&gt;(Random rng, DistributionMode mode, IReadOnlyList&lt;T&gt; list, float normalSpreadFactor = 0.2, int maxRerolls = 10, float biasStrength = 3, bool flipBias = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1809,7 +1793,7 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
         <td><span class="parametername">list</span></td>
         <td><p>The list to pick from.</p>
 </td>
@@ -1872,16 +1856,14 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick__1_System_Random_MoraGames_MapGen_Internal_RNG_DistributionParams_System_Collections_Generic_IList___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick``1(System.Random,MoraGames.MapGen.Internal.RNG.DistributionParams,System.Collections.Generic.IList{``0})">Pick&lt;T&gt;(Random, DistributionParams, IList&lt;T&gt;)</h4>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick__1_System_Random_MoraGames_MapGen_Internal_RNG_DistributionParams_System_Collections_Generic_IReadOnlyList___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick``1(System.Random,MoraGames.MapGen.Internal.RNG.DistributionParams,System.Collections.Generic.IReadOnlyList{``0})">Pick&lt;T&gt;(Random, DistributionParams, IReadOnlyList&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>Picks a random element from a list using distribution parameters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Pick&lt;T&gt;(Random rng, DistributionParams distributionParams, IList&lt;T&gt; list)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T Pick&lt;T&gt;(Random rng, DistributionParams distributionParams, IReadOnlyList&lt;T&gt; list)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1906,7 +1888,7 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
         <td><span class="parametername">list</span></td>
         <td><p>The list to pick from.</p>
 </td>
@@ -1945,16 +1927,14 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick__1_System_String_MoraGames_MapGen_Advanced_RNG_DistributionMode_System_Collections_Generic_IList___0__System_Single_System_Int32_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick``1(System.String,MoraGames.MapGen.Advanced.RNG.DistributionMode,System.Collections.Generic.IList{``0},System.Single,System.Int32,System.Single,System.Boolean)">Pick&lt;T&gt;(string, DistributionMode, IList&lt;T&gt;, float, int, float, bool)</h4>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick__1_System_String_MoraGames_MapGen_Advanced_RNG_DistributionMode_System_Collections_Generic_IReadOnlyList___0__System_Single_System_Int32_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick``1(System.String,MoraGames.MapGen.Advanced.RNG.DistributionMode,System.Collections.Generic.IReadOnlyList{``0},System.Single,System.Int32,System.Single,System.Boolean)">Pick&lt;T&gt;(string, DistributionMode, IReadOnlyList&lt;T&gt;, float, int, float, bool)</h4>
   <div class="markdown level1 summary"><p>Picks a random element from a list using the specified distribution mode and seed key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Pick&lt;T&gt;(string key, DistributionMode mode, IList&lt;T&gt; list, float normalSpreadFactor = 0.2, int maxRerolls = 10, float biasStrength = 3, bool flipBias = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T Pick&lt;T&gt;(string key, DistributionMode mode, IReadOnlyList&lt;T&gt; list, float normalSpreadFactor = 0.2, int maxRerolls = 10, float biasStrength = 3, bool flipBias = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1979,7 +1959,7 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
         <td><span class="parametername">list</span></td>
         <td><p>The list to pick from.</p>
 </td>
@@ -2042,16 +2022,14 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick__1_System_String_MoraGames_MapGen_Internal_RNG_DistributionParams_System_Collections_Generic_IList___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick``1(System.String,MoraGames.MapGen.Internal.RNG.DistributionParams,System.Collections.Generic.IList{``0})">Pick&lt;T&gt;(string, DistributionParams, IList&lt;T&gt;)</h4>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Pick__1_System_String_MoraGames_MapGen_Internal_RNG_DistributionParams_System_Collections_Generic_IReadOnlyList___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Pick``1(System.String,MoraGames.MapGen.Internal.RNG.DistributionParams,System.Collections.Generic.IReadOnlyList{``0})">Pick&lt;T&gt;(string, DistributionParams, IReadOnlyList&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>Picks a random element from a list using distribution parameters and seed key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Pick&lt;T&gt;(string key, DistributionParams distributionParams, IList&lt;T&gt; list)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T Pick&lt;T&gt;(string key, DistributionParams distributionParams, IReadOnlyList&lt;T&gt; list)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2076,7 +2054,7 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
         <td><span class="parametername">list</span></td>
         <td><p>The list to pick from.</p>
 </td>
@@ -2115,8 +2093,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_System_Random_MoraGames_MapGen_Advanced_RNG_DistributionMode_System_Int32_System_Int32_System_Single_System_Int32_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range(System.Random,MoraGames.MapGen.Advanced.RNG.DistributionMode,System.Int32,System.Int32,System.Single,System.Int32,System.Single,System.Boolean)">Range(Random, DistributionMode, int, int, float, int, float, bool)</h4>
   <div class="markdown level1 summary"><p>Generates a random integer within a range using the specified distribution mode.</p>
@@ -2202,8 +2178,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_System_Random_MoraGames_MapGen_Advanced_RNG_DistributionMode_System_Single_System_Single_System_Single_System_Int32_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range(System.Random,MoraGames.MapGen.Advanced.RNG.DistributionMode,System.Single,System.Single,System.Single,System.Int32,System.Single,System.Boolean)">Range(Random, DistributionMode, float, float, float, int, float, bool)</h4>
   <div class="markdown level1 summary"><p>Generates a random float within a range using the specified distribution mode.</p>
@@ -2289,8 +2263,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_System_Random_MoraGames_MapGen_Internal_RNG_DistributionParams_System_Single_System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range(System.Random,MoraGames.MapGen.Internal.RNG.DistributionParams,System.Single,System.Single)">Range(Random, DistributionParams, float, float)</h4>
   <div class="markdown level1 summary"><p>Generates a random float within a range using distribution parameters from a DistributionParams object.</p>
@@ -2352,8 +2324,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_System_String_MoraGames_MapGen_Advanced_RNG_DistributionMode_System_Int32_System_Int32_System_Single_System_Int32_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range(System.String,MoraGames.MapGen.Advanced.RNG.DistributionMode,System.Int32,System.Int32,System.Single,System.Int32,System.Single,System.Boolean)">Range(string, DistributionMode, int, int, float, int, float, bool)</h4>
   <div class="markdown level1 summary"><p>Generates a random integer within a range using the specified distribution mode and seed key.</p>
@@ -2439,8 +2409,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_System_String_MoraGames_MapGen_Advanced_RNG_DistributionMode_System_Single_System_Single_System_Single_System_Int32_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range(System.String,MoraGames.MapGen.Advanced.RNG.DistributionMode,System.Single,System.Single,System.Single,System.Int32,System.Single,System.Boolean)">Range(string, DistributionMode, float, float, float, int, float, bool)</h4>
   <div class="markdown level1 summary"><p>Generates a random float within a range using the specified distribution mode and seed key.</p>
@@ -2526,8 +2494,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Range_System_String_MoraGames_MapGen_Internal_RNG_DistributionParams_System_Single_System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Range(System.String,MoraGames.MapGen.Internal.RNG.DistributionParams,System.Single,System.Single)">Range(string, DistributionParams, float, float)</h4>
   <div class="markdown level1 summary"><p>Generates a random float within a range using distribution parameters and seed key.</p>
@@ -2589,16 +2555,14 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Shuffle_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Shuffle*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Shuffle__1_System_String_System_Collections_Generic_List___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Shuffle``1(System.String,System.Collections.Generic.List{``0})">Shuffle&lt;T&gt;(string, List&lt;T&gt;)</h4>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Shuffle__1_System_Random_System_Collections_Generic_IList___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Shuffle``1(System.Random,System.Collections.Generic.IList{``0})">Shuffle&lt;T&gt;(Random, IList&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>Shuffles a list in-place using the Fisher-Yates algorithm.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Shuffle&lt;T&gt;(string key, List&lt;T&gt; list)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Shuffle&lt;T&gt;(Random rng, IList&lt;T&gt; list)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2611,13 +2575,13 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">key</span></td>
-        <td><p>The seed key for the RNG stream.</p>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">rng</span></td>
+        <td><p>The System.Random RNG stream to use.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
         <td><span class="parametername">list</span></td>
         <td><p>The list to shuffle.</p>
 </td>
@@ -2640,83 +2604,14 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
-  <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformPick*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPick__1_System_Random_System_Collections_Generic_IList___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformPick``1(System.Random,System.Collections.Generic.IList{``0})">UniformPick&lt;T&gt;(Random, IList&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Randomly selects an element from the list with uniform probability.</p>
+  <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Shuffle_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Shuffle*"></a>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Shuffle__1_System_String_System_Collections_Generic_IList___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Shuffle``1(System.String,System.Collections.Generic.IList{``0})">Shuffle&lt;T&gt;(string, IList&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Shuffles a list in-place using the Fisher-Yates algorithm.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T UniformPick&lt;T&gt;(Random rng, IList&lt;T&gt; list)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
-        <td><span class="parametername">rng</span></td>
-        <td><p>The Random instance to use.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
-        <td><span class="parametername">list</span></td>
-        <td><p>The list to pick from.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>A randomly selected element from the list.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The element type.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-
-
-  <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformPick*"></a>
-  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPick__1_System_String_System_Collections_Generic_IList___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformPick``1(System.String,System.Collections.Generic.IList{``0})">UniformPick&lt;T&gt;(string, IList&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Randomly selects an element from the list with uniform probability using the specified seed key.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T UniformPick&lt;T&gt;(string key, IList&lt;T&gt; list)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Shuffle&lt;T&gt;(string key, IList&lt;T&gt; list)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2737,6 +2632,123 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
         <td><span class="parametername">list</span></td>
+        <td><p>The list to shuffle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The element type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPickAndRemove_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformPickAndRemove*"></a>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPickAndRemove__1_System_Random_System_Collections_Generic_List___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformPickAndRemove``1(System.Random,System.Collections.Generic.List{``0})">UniformPickAndRemove&lt;T&gt;(Random, List&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Uniformly selects and removes an element from a list in constant time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T UniformPickAndRemove&lt;T&gt;(Random rng, List&lt;T&gt; list)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">rng</span></td>
+        <td><p>The random number generator to use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</td>
+        <td><span class="parametername">list</span></td>
+        <td><p>The non-empty list to select from and modify.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The selected element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The element type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPickAndRemove__1_System_Random_System_Collections_Generic_List___0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not preserve the order of the remaining elements.</p>
+</div>
+  <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformPick*"></a>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPick__1_System_Random_System_Collections_Generic_IReadOnlyList___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformPick``1(System.Random,System.Collections.Generic.IReadOnlyList{``0})">UniformPick&lt;T&gt;(Random, IReadOnlyList&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Randomly selects an element from the list with uniform probability.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T UniformPick&lt;T&gt;(Random rng, IReadOnlyList&lt;T&gt; list)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">rng</span></td>
+        <td><p>The Random instance to use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
+        <td><span class="parametername">list</span></td>
         <td><p>The list to pick from.</p>
 </td>
       </tr>
@@ -2774,8 +2786,71 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
+  <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPick_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformPick*"></a>
+  <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformPick__1_System_String_System_Collections_Generic_IReadOnlyList___0__" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformPick``1(System.String,System.Collections.Generic.IReadOnlyList{``0})">UniformPick&lt;T&gt;(string, IReadOnlyList&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Randomly selects an element from the list with uniform probability using the specified seed key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T UniformPick&lt;T&gt;(string key, IReadOnlyList&lt;T&gt; list)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The seed key for the RNG stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
+        <td><span class="parametername">list</span></td>
+        <td><p>The list to pick from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>A randomly selected element from the list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The element type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformRange_System_Random_System_Int32_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformRange(System.Random,System.Int32,System.Int32)">UniformRange(Random, int, int)</h4>
   <div class="markdown level1 summary"><p>Generates a uniform random integer within the specified range.</p>
@@ -2831,8 +2906,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformRange_System_Random_System_Single_System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformRange(System.Random,System.Single,System.Single)">UniformRange(Random, float, float)</h4>
   <div class="markdown level1 summary"><p>Generates a uniform random float within the specified range.</p>
@@ -2888,8 +2961,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformRange_System_String_System_Int32_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformRange(System.String,System.Int32,System.Int32)">UniformRange(string, int, int)</h4>
   <div class="markdown level1 summary"><p>Generates a uniform random integer within the specified range using the specified seed key.</p>
@@ -2945,8 +3016,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformRange_System_String_System_Single_System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformRange(System.String,System.Single,System.Single)">UniformRange(string, float, float)</h4>
   <div class="markdown level1 summary"><p>Generates a uniform random float within the specified range using the specified seed key.</p>
@@ -3002,8 +3071,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformValue_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformValue*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformValue_System_Random_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformValue(System.Random)">UniformValue(Random)</h4>
   <div class="markdown level1 summary"><p>Generates a uniform random float in the range [0, 1).</p>
@@ -3047,8 +3114,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformValue_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformValue*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UniformValue_System_String_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UniformValue(System.String)">UniformValue(string)</h4>
   <div class="markdown level1 summary"><p>Generates a uniform random float in the range [0, 1) using the specified seed key.</p>
@@ -3092,8 +3157,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UnityRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UnityRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UnityRange_System_Int32_System_Int32_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UnityRange(System.Int32,System.Int32)">UnityRange(int, int)</h4>
   <div class="markdown level1 summary"><p>Wrapper used to differentiate deliberate uses of Unity's Randomness.</p>
@@ -3141,8 +3204,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UnityRange_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UnityRange*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_UnityRange_System_Single_System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.UnityRange(System.Single,System.Single)">UnityRange(float, float)</h4>
   <div class="markdown level1 summary"><p>Wrapper used to differentiate deliberate uses of Unity's Randomness.</p>
@@ -3190,8 +3251,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Value_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Value*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Value_System_Random_MoraGames_MapGen_Advanced_RNG_DistributionMode_System_Single_System_Single_System_Single_System_Boolean_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Value(System.Random,MoraGames.MapGen.Advanced.RNG.DistributionMode,System.Single,System.Single,System.Single,System.Boolean)">Value(Random, DistributionMode, float, float, float, bool)</h4>
   <div class="markdown level1 summary"><p>Generates a random value using the specified distribution mode.</p>
@@ -3265,8 +3324,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Value_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Value*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Value_System_Random_MoraGames_MapGen_Internal_RNG_DistributionParams_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Value(System.Random,MoraGames.MapGen.Internal.RNG.DistributionParams)">Value(Random, DistributionParams)</h4>
   <div class="markdown level1 summary"><p>Generates a random value using distribution parameters from a DistributionParams object.</p>
@@ -3316,8 +3373,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Value_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Value*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Value_System_String_MoraGames_MapGen_Advanced_RNG_DistributionMode_System_Single_System_Single_System_Single_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Value(System.String,MoraGames.MapGen.Advanced.RNG.DistributionMode,System.Single,System.Single,System.Single)">Value(string, DistributionMode, float, float, float)</h4>
   <div class="markdown level1 summary"><p>Generates a random value using the specified distribution mode and seed key.</p>
@@ -3385,8 +3440,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Value_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Value*"></a>
   <h4 id="MoraGames_MapGen_Advanced_RNG_MapGenRandom_Value_System_String_MoraGames_MapGen_Internal_RNG_DistributionParams_" data-uid="MoraGames.MapGen.Advanced.RNG.MapGenRandom.Value(System.String,MoraGames.MapGen.Internal.RNG.DistributionParams)">Value(string, DistributionParams)</h4>
   <div class="markdown level1 summary"><p>Generates a random value using distribution parameters from a DistributionParams object and seed key.</p>
@@ -3442,10 +3495,6 @@ float height = Normal(key, mean: 170f, stdDev: 10f);</code></pre>
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

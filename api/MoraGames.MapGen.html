@@ -100,6 +100,9 @@ Classes
       <h4><a class="xref" href="MoraGames.MapGen.BakedGridSpace.html">BakedGridSpace</a></h4>
       <section><p>Represents a single tile in the generated map grid.</p>
 </section>
+      <h4><a class="xref" href="MoraGames.MapGen.BakedGridSpaceExtensions.html">BakedGridSpaceExtensions</a></h4>
+      <section><p>Extension methods providing utility operations for BakedGridSpace instances.</p>
+</section>
       <h4><a class="xref" href="MoraGames.MapGen.BakedMap.html">BakedMap</a></h4>
       <section><p>Represents the finalized, runtime-accessible structure of a generated map.</p>
 </section>
@@ -110,10 +113,13 @@ Classes
       <section><p>Extension methods for graph-based distance calculations and area finding on BakedMap.</p>
 </section>
       <h4><a class="xref" href="MoraGames.MapGen.BakedMapPathExtensions.html">BakedMapPathExtensions</a></h4>
-      <section><p>Extension methods for A* pathfinding operations on BakedMap grid spaces.</p>
+      <section><p>Extension methods for point-to-point A* pathfinding between BakedMap grid spaces.</p>
 </section>
       <h4><a class="xref" href="MoraGames.MapGen.ComplexFloor.html">ComplexFloor</a></h4>
       <section><p>Component that procedurally selects and instantiates corridor floor prefabs based on tile configuration.</p>
+</section>
+      <h4><a class="xref" href="MoraGames.MapGen.EdgeExtensions.html">EdgeExtensions</a></h4>
+      <section><p>Extension methods for converting an <a class="xref" href="MoraGames.MapGen.Edge.html">Edge</a> into world-space facing directions.</p>
 </section>
       <h4><a class="xref" href="MoraGames.MapGen.MapGenSettingsSO.html">MapGenSettingsSO</a></h4>
       <section><p>ScriptableObject asset defining all parameters for procedural map generation.</p>
@@ -121,11 +127,17 @@ Classes
       <h4><a class="xref" href="MoraGames.MapGen.MoraMapGen.html">MoraMapGen</a></h4>
       <section><p>Main MonoBehaviour component for generating procedural grid-based dungeon maps.</p>
 </section>
+      <h4><a class="xref" href="MoraGames.MapGen.ProceduralAreaAssignmentOverrides.html">ProceduralAreaAssignmentOverrides</a></h4>
+      <section><p>Allows you to assign AreaDefinitions to rooms and corridors before the normal map gen process assigns them randomly. You can specify areas by criteria such as size, door count, or distance from another area.</p>
+</section>
       <h4><a class="xref" href="MoraGames.MapGen.RoomShapeSO.html">RoomShapeSO</a></h4>
       <section><p>ScriptableObject asset defining a room shape template using sprite tiles.</p>
 </section>
       <h4><a class="xref" href="MoraGames.MapGen.TileModuleDefinitionsSO.html">TileModuleDefinitionsSO</a></h4>
       <section><p>ScriptableObject asset defining tile module prefabs to use when assigned to an Area Definition asset.</p>
+</section>
+      <h4><a class="xref" href="MoraGames.MapGen.TilemapAreaAssignmentOverrides.html">TilemapAreaAssignmentOverrides</a></h4>
+      <section><p>Assigns AreaDefinitions to the rooms and corridors containing specific Tilemap cells when generating from a Tilemap.</p>
 </section>
     <h3 id="enums">
 Enums
@@ -142,6 +154,12 @@ Enums
       <h4><a class="xref" href="MoraGames.MapGen.EnvType.html">EnvType</a></h4>
       <section><p>Defines the type of environment for a pixel of a tile blueprint, or the general type of the entire tile determined by the center pixel.</p>
 </section>
+      <h4><a class="xref" href="MoraGames.MapGen.GenerationSource.html">GenerationSource</a></h4>
+      <section><p>This enum is used by the MoraMapGen component to specify which source should be used for generating the map.</p>
+</section>
+      <h4><a class="xref" href="MoraGames.MapGen.ProceduralAreaAssignmentOverrides.AreaCriteria.html">ProceduralAreaAssignmentOverrides.AreaCriteria</a></h4>
+      <section><p>The rule used to choose which area(s) an override applies to.</p>
+</section>
 
 
 </article>
@@ -149,10 +167,6 @@ Enums
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

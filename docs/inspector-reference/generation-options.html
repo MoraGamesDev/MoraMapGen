@@ -82,25 +82,28 @@
 <p><img src="../../images/generation-options/Generation%20Options.png" alt="Generation options on MorMapGen inspector"></p>
 <h2 id="generate-map-button">&quot;Generate Map&quot; Button</h2>
 <p>Generates a map in the editor based on your settings. This will clear any existing map first.</p>
-<h2 id="clear-map-button">&quot;Clear Map&quot; Button</h2>
+<h2 id="x-clear-map-button">&quot;X&quot; Clear Map Button</h2>
 <p>Deletes the existing map and clears all baked data.</p>
-<h2 id="bake-to-prefab-button">&quot;Bake to Prefab&quot; Button</h2>
-<p>Saves a new prefab asset. The GameObject that the MoraMapGen component is attached to becomes the root of the new prefab. If a prefab already exists with the same name in the same location, a prefab variant will be made.</p>
 <h2 id="generate-on-awake-toggle">&quot;Generate On Awake&quot; Toggle</h2>
 <p>When turned on, the map will generate at runtime on Awake(). If there is already a map, it will clear it first.</p>
+<h2 id="generation-source">Generation Source</h2>
+<p>Select between two different methods for determining the layout of the map.</p>
+<h3 id="procedural">Procedural</h3>
+<p>The default mode. Uses wave-function-collapse (WFC) to randomly generate a map layout using your settings.</p>
+<h3 id="tilemap">Tilemap</h3>
+<p>Uses a Unity Tilemap as the layout, so no generation occurs, but it still uses your random seed and Area Options settings to define the areas and place GameObject. See <a href="../concepts/generating-from-a-tilemap.html">Generating from a Tilemap</a></p>
+<h1 id="tilemap-baking">Tilemap Baking</h1>
+<p>After you've generated a map, you have the option to bake the layout to a Tilemap. Using Unity's Tilemap editing features you can modify the layout and then us it as the Generation Source.</p>
+<h2 id="destination-tilemap">Destination Tilemap</h2>
+<p>The Tilemap to bake the generated layout to.</p>
+<h2 id="bake-to-tilemap-button">&quot;Bake to Tilemap&quot; Button</h2>
+<p>Bakes the layout to the destination Tilemap. Button is disabled if there is no assigned destination Tilemap.</p>
 
 </article>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/BlackOpsBen/Nemesis/blob/main/MoraMapGen_Documentation/docs/inspector-reference/generation-options.md/#L1" class="contribution-link">Edit this page</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

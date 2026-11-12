@@ -76,12 +76,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="post-processes">
 <h1 id="mapgen-post-processes">MapGen Post-Processes</h1>
 
 <p>A MapGen Post-Process is a component attached to the same GameObject as your MoraMapGen component which executes code after the map has been baked, but before OnBakedMapReady is invoked.</p>
 <h2 id="execution">Execution</h2>
-<p>A MapGen Post-Process implements the IMapGenPostProcess interface, and executes during one of the following phases:</p>
+<p>A MapGen Post-Process implements the <a class="xref" href="../api/MoraGames.MapGen.Advanced.IMapGenPostProcess.html">IMapGenPostProcess</a> interface, and executes during one of the following phases:</p>
 <ul>
 <li>Before Props</li>
 <li>Props</li>
@@ -95,6 +95,7 @@
 <h2 id="ready-to-use-mapgen-post-processes">Ready-to-use MapGen Post-Processes</h2>
 <ul>
 <li><a href="post-processes/prop-placement.html">Prop Placement</a></li>
+<li><a href="post-processes/map-gameobject-placement.html">Map GameObject Placement</a></li>
 <li><a href="post-processes/navmesh-surface-baking.html">NavMesh Surface</a></li>
 <li><a href="post-processes/reflection-probe-placement.html">Reflection Probe Placement</a></li>
 </ul>
@@ -105,13 +106,6 @@
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/BlackOpsBen/Nemesis/blob/main/MoraMapGen_Documentation/docs/post-processes.md/#L1" class="contribution-link">Edit this page</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

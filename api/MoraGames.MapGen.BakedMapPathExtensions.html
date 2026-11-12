@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class BakedMapPathExtensions | MoraMapGen ">
     
-    <meta name="description" content="Extension methods for A* pathfinding operations on BakedMap grid spaces.">
+    <meta name="description" content="Extension methods for point-to-point A* pathfinding between BakedMap grid spaces.">
       <link rel="shortcut icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -81,7 +81,7 @@
 
 
   <h1 id="MoraGames_MapGen_BakedMapPathExtensions" data-uid="MoraGames.MapGen.BakedMapPathExtensions" class="text-break">Class BakedMapPathExtensions</h1>
-  <div class="markdown level0 summary"><p>Extension methods for A* pathfinding operations on BakedMap grid spaces.</p>
+  <div class="markdown level0 summary"><p>Extension methods for point-to-point A* pathfinding between BakedMap grid spaces.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -89,49 +89,153 @@
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">BakedMapPathExtensions</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoraGames.html">MoraGames</a>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a></h6>
+  <h6><strong>Namespace</strong>: <span class="xref">MoraGames</span>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a></h6>
   <h6><strong>Assembly</strong>: MoraMapGen.Runtime.dll</h6>
   <h5 id="MoraGames_MapGen_BakedMapPathExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class BakedMapPathExtensions</code></pre>
   </div>
+  <h5 id="MoraGames_MapGen_BakedMapPathExtensions_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>For breadth-first distance fields and area-based queries, see <a class="xref" href="MoraGames.MapGen.BakedMapGraphExtensions.html">BakedMapGraphExtensions</a>. For area-graph paths, see <a class="xref" href="MoraGames.MapGen.BakedAreaGraphExtensions.html">BakedAreaGraphExtensions</a>.</p>
+</div>
   <h3 id="methods">Methods
 </h3>
-
-
-  <a id="MoraGames_MapGen_BakedMapPathExtensions_TryGetPath_" data-uid="MoraGames.MapGen.BakedMapPathExtensions.TryGetPath*"></a>
-  <h4 id="MoraGames_MapGen_BakedMapPathExtensions_TryGetPath_MoraGames_MapGen_BakedMap_UnityEngine_Vector2Int_UnityEngine_Vector2Int_MoraGames_MapGen_Internal_SearchTile__MoraGames_MapGen_EnvType___" data-uid="MoraGames.MapGen.BakedMapPathExtensions.TryGetPath(MoraGames.MapGen.BakedMap,UnityEngine.Vector2Int,UnityEngine.Vector2Int,MoraGames.MapGen.Internal.SearchTile@,MoraGames.MapGen.EnvType[])">TryGetPath(BakedMap, Vector2Int, Vector2Int, out SearchTile, params EnvType[])</h4>
-  <div class="markdown level1 summary"><p>Attempts to find a path between two positions in the baked map,
-using a simplified A* search over valid environment types.</p>
+  <a id="MoraGames_MapGen_BakedMapPathExtensions_GetGridDistance_" data-uid="MoraGames.MapGen.BakedMapPathExtensions.GetGridDistance*"></a>
+  <h4 id="MoraGames_MapGen_BakedMapPathExtensions_GetGridDistance_MoraGames_MapGen_BakedMap_MoraGames_MapGen_BakedGridSpace_MoraGames_MapGen_BakedGridSpace_MoraGames_MapGen_EnvType___" data-uid="MoraGames.MapGen.BakedMapPathExtensions.GetGridDistance(MoraGames.MapGen.BakedMap,MoraGames.MapGen.BakedGridSpace,MoraGames.MapGen.BakedGridSpace,MoraGames.MapGen.EnvType[])">GetGridDistance(BakedMap, BakedGridSpace, BakedGridSpace, params EnvType[])</h4>
+  <div class="markdown level1 summary"><p>Gets the number of grid steps along the shortest walkable path between two grid spaces.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryGetPath(this BakedMap bakedMap, Vector2Int start, Vector2Int end, out SearchTile pathEnd, params EnvType[] validTypes)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int GetGridDistance(this BakedMap bakedMap, BakedGridSpace start, BakedGridSpace end, params EnvType[] validTypes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.BakedMap.html">BakedMap</a></td>
+        <td><span class="parametername">bakedMap</span></td>
+        <td><p>The map to search through.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.BakedGridSpace.html">BakedGridSpace</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The starting grid space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.BakedGridSpace.html">BakedGridSpace</a></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The target grid space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.EnvType.html">EnvType</a>[]</td>
+        <td><span class="parametername">validTypes</span></td>
+        <td><p>Environment types the path may traverse. If none are given, Room and Corridor are used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>The number of steps (0 when both are the same space), or -1 if no path exists.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="MoraGames_MapGen_BakedMapPathExtensions_TryGetGridSpacePath_" data-uid="MoraGames.MapGen.BakedMapPathExtensions.TryGetGridSpacePath*"></a>
+  <h4 id="MoraGames_MapGen_BakedMapPathExtensions_TryGetGridSpacePath_MoraGames_MapGen_BakedMap_MoraGames_MapGen_BakedGridSpace_MoraGames_MapGen_BakedGridSpace_System_Collections_Generic_List_MoraGames_MapGen_BakedGridSpace___MoraGames_MapGen_EnvType___" data-uid="MoraGames.MapGen.BakedMapPathExtensions.TryGetGridSpacePath(MoraGames.MapGen.BakedMap,MoraGames.MapGen.BakedGridSpace,MoraGames.MapGen.BakedGridSpace,System.Collections.Generic.List{MoraGames.MapGen.BakedGridSpace}@,MoraGames.MapGen.EnvType[])">TryGetGridSpacePath(BakedMap, BakedGridSpace, BakedGridSpace, out List&lt;BakedGridSpace&gt;, params EnvType[])</h4>
+  <div class="markdown level1 summary"><p>Attempts to find the shortest walkable path between two grid spaces and returns it as an ordered list of grid spaces.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetGridSpacePath(this BakedMap bakedMap, BakedGridSpace start, BakedGridSpace end, out List&lt;BakedGridSpace&gt; path, params EnvType[] validTypes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.BakedMap.html">BakedMap</a></td>
+        <td><span class="parametername">bakedMap</span></td>
+        <td><p>The map to search through.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.BakedGridSpace.html">BakedGridSpace</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The starting grid space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.BakedGridSpace.html">BakedGridSpace</a></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The target grid space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MoraGames.MapGen.BakedGridSpace.html">BakedGridSpace</a>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The grid spaces from <code class="paramref">start</code> to <code class="paramref">end</code>, inclusive. Null if no path was found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.EnvType.html">EnvType</a>[]</td>
+        <td><span class="parametername">validTypes</span></td>
+        <td><p>Environment types the path may traverse. If none are given, Room and Corridor are used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if a path was found; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="MoraGames_MapGen_BakedMapPathExtensions_TryGetGridSpacePath_" data-uid="MoraGames.MapGen.BakedMapPathExtensions.TryGetGridSpacePath*"></a>
+  <h4 id="MoraGames_MapGen_BakedMapPathExtensions_TryGetGridSpacePath_MoraGames_MapGen_BakedMap_UnityEngine_Vector2Int_UnityEngine_Vector2Int_System_Collections_Generic_List_MoraGames_MapGen_BakedGridSpace___MoraGames_MapGen_EnvType___" data-uid="MoraGames.MapGen.BakedMapPathExtensions.TryGetGridSpacePath(MoraGames.MapGen.BakedMap,UnityEngine.Vector2Int,UnityEngine.Vector2Int,System.Collections.Generic.List{MoraGames.MapGen.BakedGridSpace}@,MoraGames.MapGen.EnvType[])">TryGetGridSpacePath(BakedMap, Vector2Int, Vector2Int, out List&lt;BakedGridSpace&gt;, params EnvType[])</h4>
+  <div class="markdown level1 summary"><p>Attempts to find the shortest walkable path between two grid positions and returns it as an ordered list of grid spaces.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetGridSpacePath(this BakedMap bakedMap, Vector2Int start, Vector2Int end, out List&lt;BakedGridSpace&gt; path, params EnvType[] validTypes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -162,16 +266,15 @@ using a simplified A* search over valid environment types.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">SearchTile</span></td>
-        <td><span class="parametername">pathEnd</span></td>
-        <td><p>If the path is found, this will contain the final SearchTile in the chain,
-from which the full path can be reconstructed using GetPathPositions().</p>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MoraGames.MapGen.BakedGridSpace.html">BakedGridSpace</a>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The grid spaces from <code class="paramref">start</code> to <code class="paramref">end</code>, inclusive. Null if no path was found.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="MoraGames.MapGen.EnvType.html">EnvType</a>[]</td>
         <td><span class="parametername">validTypes</span></td>
-        <td><p>Optional list of valid environment types (e.g., Room, Corridor) that the path may traverse.</p>
+        <td><p>Environment types the path may traverse. If none are given, Room and Corridor are used.</p>
 </td>
       </tr>
     </tbody>
@@ -187,25 +290,20 @@ from which the full path can be reconstructed using GetPathPositions().</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><p>True if a valid path was found; otherwise, false.</p>
+        <td><p>True if a path was found; otherwise, false. Out-of-bounds positions return false.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoraGames_MapGen_BakedMapPathExtensions_TryGetPath_MoraGames_MapGen_BakedMap_UnityEngine_Vector2Int_UnityEngine_Vector2Int_MoraGames_MapGen_Internal_SearchTile__MoraGames_MapGen_EnvType____examples">Examples</h5>
+  <h5 id="MoraGames_MapGen_BakedMapPathExtensions_TryGetGridSpacePath_MoraGames_MapGen_BakedMap_UnityEngine_Vector2Int_UnityEngine_Vector2Int_System_Collections_Generic_List_MoraGames_MapGen_BakedGridSpace___MoraGames_MapGen_EnvType____examples">Examples</h5>
   <p>Vector2Int start = map.GetGridSpace(startObj.position).GridPosition;
 Vector2Int end = map.GetGridSpace(endObj.position).GridPosition;</p>
-<p>if (map.TryGetPath(start, end, out var pathEnd, EnvType.Room, EnvType.Corridor))
+<p>if (map.TryGetGridSpacePath(start, end, out List&lt;BakedGridSpace&gt; path))
 {
-foreach (var pos in pathEnd.GetPathPositions())
+foreach (BakedGridSpace space in path)
 {
-Vector3 worldPos = map.GetWorldPosition(pos);
-Instantiate(markerPrefab, worldPos, Quaternion.identity);
+Instantiate(markerPrefab, space.CenterWorldPosition, Quaternion.identity);
 }
-}
-else
-{
-Debug.Log(&quot;No path found.&quot;);
 }</p>
 
 
@@ -214,10 +312,6 @@ Debug.Log(&quot;No path found.&quot;);
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

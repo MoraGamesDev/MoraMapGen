@@ -89,35 +89,12 @@
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">BakedGridSpace</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoraGames.html">MoraGames</a>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a></h6>
+  <h6><strong>Namespace</strong>: <span class="xref">MoraGames</span>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a></h6>
   <h6><strong>Assembly</strong>: MoraMapGen.Runtime.dll</h6>
   <h5 id="MoraGames_MapGen_BakedGridSpace_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BakedGridSpace</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class BakedGridSpace</code></pre>
   </div>
   <h5 id="MoraGames_MapGen_BakedGridSpace_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>BakedGridSpace provides access to the tile's position, environment types,
@@ -126,8 +103,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
 </div>
   <h3 id="constructors">Constructors
 </h3>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace__ctor_" data-uid="MoraGames.MapGen.BakedGridSpace.#ctor*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace__ctor_MoraGames_MapGen_Internal_GenGridSpace_UnityEngine_Vector3_UnityEngine_GameObject___" data-uid="MoraGames.MapGen.BakedGridSpace.#ctor(MoraGames.MapGen.Internal.GenGridSpace,UnityEngine.Vector3,UnityEngine.GameObject[])">BakedGridSpace(GenGridSpace, Vector3, GameObject[])</h4>
   <div class="markdown level1 summary"><p>Constructs a new BakedGridSpace from generated tile data.</p>
@@ -169,8 +144,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
   </table>
   <h3 id="fields">Fields
 </h3>
-
-
   <h4 id="MoraGames_MapGen_BakedGridSpace_DoorObjects" data-uid="MoraGames.MapGen.BakedGridSpace.DoorObjects">DoorObjects</h4>
   <div class="markdown level1 summary"><p>GameObjects representing doors at this grid space.</p>
 </div>
@@ -194,8 +167,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
-
-
   <h4 id="MoraGames_MapGen_BakedGridSpace_name" data-uid="MoraGames.MapGen.BakedGridSpace.name">name</h4>
   <div class="markdown level1 summary"><p>The string representation of this grid space's position.</p>
 </div>
@@ -221,8 +192,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
   </table>
   <h3 id="properties">Properties
 </h3>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_CenterType_" data-uid="MoraGames.MapGen.BakedGridSpace.CenterType*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_CenterType" data-uid="MoraGames.MapGen.BakedGridSpace.CenterType">CenterType</h4>
   <div class="markdown level1 summary"></div>
@@ -247,8 +216,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_CenterWorldPosition_" data-uid="MoraGames.MapGen.BakedGridSpace.CenterWorldPosition*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_CenterWorldPosition" data-uid="MoraGames.MapGen.BakedGridSpace.CenterWorldPosition">CenterWorldPosition</h4>
   <div class="markdown level1 summary"></div>
@@ -273,8 +240,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_DoorEdges_" data-uid="MoraGames.MapGen.BakedGridSpace.DoorEdges*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_DoorEdges" data-uid="MoraGames.MapGen.BakedGridSpace.DoorEdges">DoorEdges</h4>
   <div class="markdown level1 summary"></div>
@@ -299,8 +264,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_GridPosition_" data-uid="MoraGames.MapGen.BakedGridSpace.GridPosition*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_GridPosition" data-uid="MoraGames.MapGen.BakedGridSpace.GridPosition">GridPosition</h4>
   <div class="markdown level1 summary"></div>
@@ -325,8 +288,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_IsDoorSpace_" data-uid="MoraGames.MapGen.BakedGridSpace.IsDoorSpace*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_IsDoorSpace" data-uid="MoraGames.MapGen.BakedGridSpace.IsDoorSpace">IsDoorSpace</h4>
   <div class="markdown level1 summary"></div>
@@ -351,8 +312,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_PixelEnvTypes_" data-uid="MoraGames.MapGen.BakedGridSpace.PixelEnvTypes*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_PixelEnvTypes" data-uid="MoraGames.MapGen.BakedGridSpace.PixelEnvTypes">PixelEnvTypes</h4>
   <div class="markdown level1 summary"></div>
@@ -377,8 +336,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_RootObject_" data-uid="MoraGames.MapGen.BakedGridSpace.RootObject*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_RootObject" data-uid="MoraGames.MapGen.BakedGridSpace.RootObject">RootObject</h4>
   <div class="markdown level1 summary"></div>
@@ -403,10 +360,32 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
+  <a id="MoraGames_MapGen_BakedGridSpace_SpriteTemplate_" data-uid="MoraGames.MapGen.BakedGridSpace.SpriteTemplate*"></a>
+  <h4 id="MoraGames_MapGen_BakedGridSpace_SpriteTemplate" data-uid="MoraGames.MapGen.BakedGridSpace.SpriteTemplate">SpriteTemplate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sprite SpriteTemplate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Sprite</span></td>
+        <td><p>The sprite template that represents this tile's layout, used for baking to a Tilemap.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_GetArea_" data-uid="MoraGames.MapGen.BakedGridSpace.GetArea*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_GetArea_MoraGames_MapGen_BakedMap_" data-uid="MoraGames.MapGen.BakedGridSpace.GetArea(MoraGames.MapGen.BakedMap)">GetArea(BakedMap)</h4>
   <div class="markdown level1 summary"><p>Gets the BakedArea that contains this grid space.</p>
@@ -450,8 +429,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_GetDoorPosition_" data-uid="MoraGames.MapGen.BakedGridSpace.GetDoorPosition*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_GetDoorPosition_MoraGames_MapGen_BakedMap_System_Int32_" data-uid="MoraGames.MapGen.BakedGridSpace.GetDoorPosition(MoraGames.MapGen.BakedMap,System.Int32)">GetDoorPosition(BakedMap, int)</h4>
   <div class="markdown level1 summary"><p>Gets the world position of a door at the specified index.</p>
@@ -501,8 +478,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_GetEdgeType_" data-uid="MoraGames.MapGen.BakedGridSpace.GetEdgeType*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_GetEdgeType_MoraGames_MapGen_Edge_" data-uid="MoraGames.MapGen.BakedGridSpace.GetEdgeType(MoraGames.MapGen.Edge)">GetEdgeType(Edge)</h4>
   <div class="markdown level1 summary"><p>Gets the EnvType of the specified edge.</p>
@@ -546,8 +521,6 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_BakedGridSpace_GetEdgesByCenterType_" data-uid="MoraGames.MapGen.BakedGridSpace.GetEdgesByCenterType*"></a>
   <h4 id="MoraGames_MapGen_BakedGridSpace_GetEdgesByCenterType_MoraGames_MapGen_EnvType_" data-uid="MoraGames.MapGen.BakedGridSpace.GetEdgesByCenterType(MoraGames.MapGen.EnvType)">GetEdgesByCenterType(EnvType)</h4>
   <div class="markdown level1 summary"><p>Gets all edges of this tile that match the specified EnvType.</p>
@@ -591,16 +564,19 @@ into 9 &quot;pixels&quot; (center + 4 edges + 4 corners of the sprite used as a 
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoraGames.MapGen.BakedGridSpaceExtensions.html#MoraGames_MapGen_BakedGridSpaceExtensions_GetEdgeDirectionWithFarthestReach_MoraGames_MapGen_BakedGridSpace_MoraGames_MapGen_BakedMap_">BakedGridSpaceExtensions.GetEdgeDirectionWithFarthestReach(BakedGridSpace, BakedMap)</a>
+  </div>
+  <div>
+      <a class="xref" href="MoraGames.MapGen.BakedGridSpaceExtensions.html#MoraGames_MapGen_BakedGridSpaceExtensions_IsCorner_MoraGames_MapGen_BakedGridSpace_">BakedGridSpaceExtensions.IsCorner(BakedGridSpace)</a>
+  </div>
 
 </article>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

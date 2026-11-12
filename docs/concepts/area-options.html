@@ -76,7 +76,7 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="area-options">
 <h1 id="area-options">Area Options</h1>
 
 <p>Area Options assets define how each room and corridor will be named and &quot;skinned&quot; (which visual style they use).</p>
@@ -85,7 +85,8 @@
 <h2 id="defining-the-area-options">Defining the Area Options</h2>
 <p>Specify which Rooms and Corridors can be used in the map generation by assigning Area Definition assets to the various categories.
 At a minimum, you must specify the Default Room and Default Corridor. They can share the same Area Definition asset if you want them to look identical, and in fact both can use the same Area Definition. You should also ensure the Tile Module Edge Size is set to match your module prefabs. Any of the other lists can be left empty.</p>
-<p><img src="../../images/concepts/area-options-inspector.PNG" alt="Area Options asset inspector"></p>
+<p><img src="../../images/concepts/area-options-inspector.PNG" alt="Area Options asset inspector 1">
+<img src="../../images/concepts/area-options-inspector-2.PNG" alt="Area Options asset inspector 2"></p>
 <h3 id="tile-module-edge-size">Tile Module Edge Size</h3>
 <p>This is where you specify the length in Unity units of each of your module prefab meshes. Each module should be the same dimensions and they should be square in the X and Z axes, but can be whatever Y height you want.
 Example: If your wall and floor prefabs are 4×4 Unity units when viewed from above, set this to 4.</p>
@@ -109,19 +110,25 @@ Example: If your wall and floor prefabs are 4×4 Unity units when viewed from ab
 </div>
 <h3 id="default-corridor">Default Corridor</h3>
 <p>This is the fallback default corridor definition used when there aren't any optional corridors available or not enough required corridors to fill all corridor spaces.</p>
+<h2 id="universal-prop-placement">Universal Prop Placement</h2>
+<p>Props and density multipliers defined here will be applied to all areas. So a &quot;required unique&quot; prop listed here will be placed exactly once in every area.</p>
+<h3 id="prop-density">Prop Density</h3>
+<p>Controls the relative density of props in this area. This is a slider from 0 to 1:</p>
+<ul>
+<li>0 means that only the minimum number of required props will be placed in this area</li>
+<li>1 means as many props as possible will be placed</li>
+<li>0.5 means a medium density</li>
+</ul>
+<h3 id="prop-channel-density-multipliers">Prop Channel Density Multipliers</h3>
+<p>A dictionary that allows you to fine-tune prop density per channel. This gives you granular control over specific prop categories within all areas.</p>
+<h3 id="prop-categories">Prop Categories</h3>
+<p>Prop placement settings that apply universally to all areas. Use this to define props that should appear in all areas.</p>
 
 </article>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/BlackOpsBen/Nemesis/blob/main/MoraMapGen_Documentation/docs/concepts/area-options.md/#L1" class="contribution-link">Edit this page</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

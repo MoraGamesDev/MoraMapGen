@@ -76,7 +76,7 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="tile-module-definitions">
 <h1 id="tile-module-definitions">Tile Module Definitions</h1>
 
 <p>A Tile Module Definitions asset defines which prefabs are used to construct the tiles that make up the map. See <a href="../complete_setup.html#7-create-module-prefabs">Create Module prefabs</a> for more info.</p>
@@ -85,7 +85,8 @@
 <p>To create a new Tile Module Definitions asset, right click in your Project Assets and select “Create/MoraMapGen/Tile Module Definition.”</p>
 <h2 id="defining-the-tile-module-definitions">Defining the Tile Module Definitions</h2>
 <p>Generally you will want at least 1 prefab assigned to each category, but they aren’t required.</p>
-<p><img src="../../images/complete-setup/TileModuleDefinitionSOInspector.PNG" alt="Tile Module Definitions inspector"></p>
+<p><img src="../../images/concepts/tile-module-definitions-inspector-1.png" alt="Tile Module Definitions inspector 1">
+<img src="../../images/concepts/tile-module-definitions-inspector-2.png" alt="Tile Module Definitions inspector 2"></p>
 <h3 id="floors">Floors</h3>
 <p>Specify the ground prefabs.</p>
 <p><img src="../../images/concepts/module-floor.png" alt="Floor module example"></p>
@@ -96,6 +97,7 @@
 <p>Used where the sprite templates have corridor pixels (black by default), Eg: Main paths in corridors and the entrances of rooms.</p>
 <p><img src="../../images/concepts/Room_Pixels.png" alt="Sprite template room floor pixels"></p>
 <p><img src="../../images/concepts/Corridor_Pixels.png" alt="Sprite template corridor floor pixels"></p>
+<p>See also <a href="complex-floor.html">Complex Floors</a></p>
 <h3 id="walls-straight">Walls Straight</h3>
 <p>Specify the straight wall prefabs. Used for straight wall segments.</p>
 <p><img src="../../images/concepts/module-wall-straight.png" alt="Wall Straight module example"></p>
@@ -127,13 +129,6 @@ This allows each side of the door to use a different style matching the room or 
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/BlackOpsBen/Nemesis/blob/main/MoraMapGen_Documentation/docs/concepts/tile-module-definitions.md/#L1" class="contribution-link">Edit this page</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

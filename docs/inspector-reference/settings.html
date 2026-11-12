@@ -208,6 +208,10 @@ Dead-ends will be removed by connecting them to adjacent rooms or corridors if p
 <p>The &quot;Whole Door&quot; prefabs defined in your Tile Module Definitions assets will be used. These should include both the frame and the opening/animating panel(s).</p>
 <h5 id="half-frames">Half Frames</h5>
 <p>The &quot;Half Door Frames&quot; and &quot;Half Door Panels&quot; prefabs defined in your Tile Module Definitions assets will be used. This setting allows each side of the door to match the style of the corridor or room, creating asymmetric doorways.</p>
+<h3 id="misc">Misc</h3>
+<p><img src="../../images/settings/Misc-settings-section.png" alt="Misc Settings section"></p>
+<h4 id="nest-modules-under-named-container">Nest Modules Under Named Container</h4>
+<p>When enabled, each spawned tile module is nested under a container GameObject named with the grid and sub-grid position, keeping the module prefab's original name. For making hand-authored edits post-generation, this lets you replace a module prefab without losing the position-based name.</p>
 <h3 id="unity-events">Unity Events</h3>
 <p><img src="../../images/settings/unity-events.PNG" alt="Unity Events section"></p>
 <h4 id="on-baked-map-ready-bakedmap">On Baked Map Ready (BakedMap)</h4>
@@ -218,13 +222,6 @@ Dead-ends will be removed by connecting them to adjacent rooms or corridors if p
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/BlackOpsBen/Nemesis/blob/main/MoraMapGen_Documentation/docs/inspector-reference/settings.md/#L1" class="contribution-link">Edit this page</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

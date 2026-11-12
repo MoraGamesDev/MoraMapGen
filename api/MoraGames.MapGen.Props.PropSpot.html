@@ -87,13 +87,18 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">PropSpot</span></div>
+    <div class="level1"><span class="xref">Object</span></div>
+    <div class="level2"><span class="xref">Component</span></div>
+    <div class="level3"><span class="xref">Behaviour</span></div>
+    <div class="level4"><span class="xref">MonoBehaviour</span></div>
+    <div class="level5"><span class="xref">PropSpot</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoraGames.html">MoraGames</a>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a>.<a class="xref" href="MoraGames.MapGen.Props.html">Props</a></h6>
+  <h6><strong>Namespace</strong>: <span class="xref">MoraGames</span>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a>.<a class="xref" href="MoraGames.MapGen.Props.html">Props</a></h6>
   <h6><strong>Assembly</strong>: MoraMapGen.Runtime.dll</h6>
   <h5 id="MoraGames_MapGen_Props_PropSpot_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PropSpot : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">[ExecuteInEditMode]
+public class PropSpot : MonoBehaviour</code></pre>
   </div>
   <h5 id="MoraGames_MapGen_Props_PropSpot_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Place this component in your tile module prefabs to define prop spawn points.
@@ -102,22 +107,8 @@ Note that the PropPlacement component only looks for these in module prefabs spa
 If you manually place them anywhere else you should create a custom IMapGenPostProcess that eithe processes them in a different way,
 or makes them children of tile objects in the Before Props phase.</p>
 </div>
-  <h3 id="constructors">Constructors
-</h3>
-
-
-  <a id="MoraGames_MapGen_Props_PropSpot__ctor_" data-uid="MoraGames.MapGen.Props.PropSpot.#ctor*"></a>
-  <h4 id="MoraGames_MapGen_Props_PropSpot__ctor" data-uid="MoraGames.MapGen.Props.PropSpot.#ctor">PropSpot()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PropSpot()</code></pre>
-  </div>
   <h3 id="properties">Properties
 </h3>
-
-
   <a id="MoraGames_MapGen_Props_PropSpot_EnvType_" data-uid="MoraGames.MapGen.Props.PropSpot.EnvType*"></a>
   <h4 id="MoraGames_MapGen_Props_PropSpot_EnvType" data-uid="MoraGames.MapGen.Props.PropSpot.EnvType">EnvType</h4>
   <div class="markdown level1 summary"></div>
@@ -142,8 +133,6 @@ or makes them children of tile objects in the Before Props phase.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Props_PropSpot_Offsets_" data-uid="MoraGames.MapGen.Props.PropSpot.Offsets*"></a>
   <h4 id="MoraGames_MapGen_Props_PropSpot_Offsets" data-uid="MoraGames.MapGen.Props.PropSpot.Offsets">Offsets</h4>
   <div class="markdown level1 summary"></div>
@@ -168,8 +157,30 @@ or makes them children of tile objects in the Before Props phase.</p>
       </tr>
     </tbody>
   </table>
-
-
+  <a id="MoraGames_MapGen_Props_PropSpot_Position_" data-uid="MoraGames.MapGen.Props.PropSpot.Position*"></a>
+  <h4 id="MoraGames_MapGen_Props_PropSpot_Position" data-uid="MoraGames.MapGen.Props.PropSpot.Position">Position</h4>
+  <div class="markdown level1 summary"><p>Returns the position of the prop spot's transform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Position { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="MoraGames_MapGen_Props_PropSpot_PropChannel_" data-uid="MoraGames.MapGen.Props.PropSpot.PropChannel*"></a>
   <h4 id="MoraGames_MapGen_Props_PropSpot_PropChannel" data-uid="MoraGames.MapGen.Props.PropSpot.PropChannel">PropChannel</h4>
   <div class="markdown level1 summary"></div>
@@ -194,8 +205,6 @@ or makes them children of tile objects in the Before Props phase.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Props_PropSpot_PropPlacementType_" data-uid="MoraGames.MapGen.Props.PropSpot.PropPlacementType*"></a>
   <h4 id="MoraGames_MapGen_Props_PropSpot_PropPlacementType" data-uid="MoraGames.MapGen.Props.PropSpot.PropPlacementType">PropPlacementType</h4>
   <div class="markdown level1 summary"></div>
@@ -220,10 +229,32 @@ or makes them children of tile objects in the Before Props phase.</p>
       </tr>
     </tbody>
   </table>
+  <a id="MoraGames_MapGen_Props_PropSpot_Rotation_" data-uid="MoraGames.MapGen.Props.PropSpot.Rotation*"></a>
+  <h4 id="MoraGames_MapGen_Props_PropSpot_Rotation" data-uid="MoraGames.MapGen.Props.PropSpot.Rotation">Rotation</h4>
+  <div class="markdown level1 summary"><p>Returns the rotation of the prop spot's transform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion Rotation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
-
-
   <a id="MoraGames_MapGen_Props_PropSpot_CheckIfUsed_" data-uid="MoraGames.MapGen.Props.PropSpot.CheckIfUsed*"></a>
   <h4 id="MoraGames_MapGen_Props_PropSpot_CheckIfUsed" data-uid="MoraGames.MapGen.Props.PropSpot.CheckIfUsed">CheckIfUsed()</h4>
   <div class="markdown level1 summary"><p>Checks whether this spot has already been used by a prop.</p>
@@ -249,17 +280,32 @@ or makes them children of tile objects in the Before Props phase.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Props_PropSpot_GetRandomOffset_" data-uid="MoraGames.MapGen.Props.PropSpot.GetRandomOffset*"></a>
-  <h4 id="MoraGames_MapGen_Props_PropSpot_GetRandomOffset" data-uid="MoraGames.MapGen.Props.PropSpot.GetRandomOffset">GetRandomOffset()</h4>
+  <h4 id="MoraGames_MapGen_Props_PropSpot_GetRandomOffset_System_Random_" data-uid="MoraGames.MapGen.Props.PropSpot.GetRandomOffset(System.Random)">GetRandomOffset(Random)</h4>
   <div class="markdown level1 summary"><p>Gets a random position offset based on configured variance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 GetRandomOffset()</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 GetRandomOffset(Random rng)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">rng</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
@@ -276,8 +322,6 @@ or makes them children of tile objects in the Before Props phase.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Props_PropSpot_GetTransform_" data-uid="MoraGames.MapGen.Props.PropSpot.GetTransform*"></a>
   <h4 id="MoraGames_MapGen_Props_PropSpot_GetTransform" data-uid="MoraGames.MapGen.Props.PropSpot.GetTransform">GetTransform()</h4>
   <div class="markdown level1 summary"><p>Gets the Transform of this PropSpot.</p>
@@ -303,8 +347,6 @@ or makes them children of tile objects in the Before Props phase.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Props_PropSpot_SetEnvType_" data-uid="MoraGames.MapGen.Props.PropSpot.SetEnvType*"></a>
   <h4 id="MoraGames_MapGen_Props_PropSpot_SetEnvType_MoraGames_MapGen_EnvType_" data-uid="MoraGames.MapGen.Props.PropSpot.SetEnvType(MoraGames.MapGen.EnvType)">SetEnvType(EnvType)</h4>
   <div class="markdown level1 summary"><p>Sets the environment type for this prop spot.</p>
@@ -332,8 +374,6 @@ or makes them children of tile objects in the Before Props phase.</p>
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_Props_PropSpot_Use_" data-uid="MoraGames.MapGen.Props.PropSpot.Use*"></a>
   <h4 id="MoraGames_MapGen_Props_PropSpot_Use_UnityEngine_GameObject_" data-uid="MoraGames.MapGen.Props.PropSpot.Use(UnityEngine.GameObject)">Use(GameObject)</h4>
   <div class="markdown level1 summary"><p>Marks this spot as used by the specified prop GameObject.</p>
@@ -367,10 +407,6 @@ or makes them children of tile objects in the Before Props phase.</p>
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

@@ -87,37 +87,27 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">AreaOptionsSO</span></div>
+    <div class="level1"><span class="xref">Object</span></div>
+    <div class="level2"><span class="xref">ScriptableObject</span></div>
+    <div class="level3"><span class="xref">AreaOptionsSO</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoraGames.html">MoraGames</a>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a></h6>
+  <h6><strong>Namespace</strong>: <span class="xref">MoraGames</span>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a></h6>
   <h6><strong>Assembly</strong>: MoraMapGen.Runtime.dll</h6>
   <h5 id="MoraGames_MapGen_AreaOptionsSO_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AreaOptionsSO : ScriptableObject</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-</h3>
-
-
-  <a id="MoraGames_MapGen_AreaOptionsSO__ctor_" data-uid="MoraGames.MapGen.AreaOptionsSO.#ctor*"></a>
-  <h4 id="MoraGames_MapGen_AreaOptionsSO__ctor" data-uid="MoraGames.MapGen.AreaOptionsSO.#ctor">AreaOptionsSO()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AreaOptionsSO()</code></pre>
+    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;New Area Options&quot;, menuName = &quot;MoraMapGen/Area Options&quot;)]
+public class AreaOptionsSO : ScriptableObject</code></pre>
   </div>
   <h3 id="fields">Fields
 </h3>
-
-
   <h4 id="MoraGames_MapGen_AreaOptionsSO_DefaultCorridor" data-uid="MoraGames.MapGen.AreaOptionsSO.DefaultCorridor">DefaultCorridor</h4>
   <div class="markdown level1 summary"><p>The default AreaDefinitionSO asset to use for corridors.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AreaDefinitionSO DefaultCorridor</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The default corridor is used as one of the optional common corridors.&quot;)]
+public AreaDefinitionSO DefaultCorridor</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -137,15 +127,14 @@
   <h5 id="MoraGames_MapGen_AreaOptionsSO_DefaultCorridor_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The default corridor is automatically used as one of the optional common corridors.</p>
 </div>
-
-
   <h4 id="MoraGames_MapGen_AreaOptionsSO_DefaultRoom" data-uid="MoraGames.MapGen.AreaOptionsSO.DefaultRoom">DefaultRoom</h4>
   <div class="markdown level1 summary"><p>The default AreaDefinitionSO asset to use for rooms.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AreaDefinitionSO DefaultRoom</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The default AreaDefinitionSO asset to use for rooms. It is also automatically used as one of the optional common rooms. The default room&#39;s \&quot; exterior ceiling\&quot; determines the exterior ceiling for the outer boundary of the map.&quot;)]
+public AreaDefinitionSO DefaultRoom</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -165,15 +154,14 @@
   <h5 id="MoraGames_MapGen_AreaOptionsSO_DefaultRoom_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The default room is automatically used as one of the optional common rooms. The default room's &quot; exterior ceiling&quot; determines the exterior ceiling for the outer boundary of the map.</p>
 </div>
-
-
   <h4 id="MoraGames_MapGen_AreaOptionsSO_OptionalCommonCorridors" data-uid="MoraGames.MapGen.AreaOptionsSO.OptionalCommonCorridors">OptionalCommonCorridors</h4>
   <div class="markdown level1 summary"><p>Map may have any number of each of these corridors.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AreaDefinitionSO[] OptionalCommonCorridors</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Map may have any number of each of these corridors.&quot;)]
+public AreaDefinitionSO[] OptionalCommonCorridors</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -190,15 +178,14 @@
       </tr>
     </tbody>
   </table>
-
-
   <h4 id="MoraGames_MapGen_AreaOptionsSO_OptionalCommonRooms" data-uid="MoraGames.MapGen.AreaOptionsSO.OptionalCommonRooms">OptionalCommonRooms</h4>
   <div class="markdown level1 summary"><p>Map may have any number of each of these rooms.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AreaDefinitionSO[] OptionalCommonRooms</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Map may have any number of each of these rooms.&quot;)]
+public AreaDefinitionSO[] OptionalCommonRooms</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -215,15 +202,14 @@
       </tr>
     </tbody>
   </table>
-
-
   <h4 id="MoraGames_MapGen_AreaOptionsSO_OptionalUniqueCorridors" data-uid="MoraGames.MapGen.AreaOptionsSO.OptionalUniqueCorridors">OptionalUniqueCorridors</h4>
   <div class="markdown level1 summary"><p>Map may have up to 1 of each of these corridors.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AreaDefinitionSO[] OptionalUniqueCorridors</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Map may have up to 1 of each of these corridors.&quot;)]
+public AreaDefinitionSO[] OptionalUniqueCorridors</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -240,15 +226,14 @@
       </tr>
     </tbody>
   </table>
-
-
   <h4 id="MoraGames_MapGen_AreaOptionsSO_OptionalUniqueRooms" data-uid="MoraGames.MapGen.AreaOptionsSO.OptionalUniqueRooms">OptionalUniqueRooms</h4>
   <div class="markdown level1 summary"><p>Map may have up to 1 of each of these rooms.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AreaDefinitionSO[] OptionalUniqueRooms</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Map may have up to 1 of each of these rooms.&quot;)]
+public AreaDefinitionSO[] OptionalUniqueRooms</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -265,15 +250,14 @@
       </tr>
     </tbody>
   </table>
-
-
   <h4 id="MoraGames_MapGen_AreaOptionsSO_RequiredUniqueCorridors" data-uid="MoraGames.MapGen.AreaOptionsSO.RequiredUniqueCorridors">RequiredUniqueCorridors</h4>
   <div class="markdown level1 summary"><p>Map MUST have exactly 1 of each of these corridors.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AreaDefinitionSO[] RequiredUniqueCorridors</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Map MUST have exactly 1 of each of these corridors.&quot;)]
+public AreaDefinitionSO[] RequiredUniqueCorridors</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -290,15 +274,14 @@
       </tr>
     </tbody>
   </table>
-
-
   <h4 id="MoraGames_MapGen_AreaOptionsSO_RequiredUniqueRooms" data-uid="MoraGames.MapGen.AreaOptionsSO.RequiredUniqueRooms">RequiredUniqueRooms</h4>
   <div class="markdown level1 summary"><p>Map MUST have exactly 1 of each of these rooms.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AreaDefinitionSO[] RequiredUniqueRooms</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Map MUST have exactly 1 of each of these rooms.&quot;)]
+public AreaDefinitionSO[] RequiredUniqueRooms</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -315,15 +298,14 @@
       </tr>
     </tbody>
   </table>
-
-
   <h4 id="MoraGames_MapGen_AreaOptionsSO_TileModuleEdgeSize" data-uid="MoraGames.MapGen.AreaOptionsSO.TileModuleEdgeSize">TileModuleEdgeSize</h4>
   <div class="markdown level1 summary"><p>The width and depth (x and z size) of your tile module meshes in Unity units.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float TileModuleEdgeSize</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The width and depth (x and z size) of your tile module meshes in Unity units.&quot;)]
+public float TileModuleEdgeSize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -340,16 +322,107 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+</h3>
+  <a id="MoraGames_MapGen_AreaOptionsSO_PropCategories_" data-uid="MoraGames.MapGen.AreaOptionsSO.PropCategories*"></a>
+  <h4 id="MoraGames_MapGen_AreaOptionsSO_PropCategories" data-uid="MoraGames.MapGen.AreaOptionsSO.PropCategories">PropCategories</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropCategories PropCategories { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.Advanced.Props.PropCategories.html">PropCategories</a></td>
+        <td><p>Prop categories defining which props should be placed all throughout the entire map.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="MoraGames_MapGen_AreaOptionsSO_PropDensity_" data-uid="MoraGames.MapGen.AreaOptionsSO.PropDensity*"></a>
+  <h4 id="MoraGames_MapGen_AreaOptionsSO_PropDensity" data-uid="MoraGames.MapGen.AreaOptionsSO.PropDensity">PropDensity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float PropDensity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>Overall prop density multiplier for this area (0 = only required props, 1 = maximum props).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <a id="MoraGames_MapGen_AreaOptionsSO_GetPropChannelDensity_" data-uid="MoraGames.MapGen.AreaOptionsSO.GetPropChannelDensity*"></a>
+  <h4 id="MoraGames_MapGen_AreaOptionsSO_GetPropChannelDensity_MoraGames_MapGen_Props_PropChannelSO_" data-uid="MoraGames.MapGen.AreaOptionsSO.GetPropChannelDensity(MoraGames.MapGen.Props.PropChannelSO)">GetPropChannelDensity(PropChannelSO)</h4>
+  <div class="markdown level1 summary"><p>Gets the prop density multiplier for a specific prop channel in this area.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetPropChannelDensity(PropChannelSO channel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoraGames.MapGen.Props.PropChannelSO.html">PropChannelSO</a></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>The prop channel to query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>The density multiplier for the specified channel, or 1.0 if no override is configured.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

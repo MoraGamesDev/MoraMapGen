@@ -87,34 +87,23 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">MapGenSettingsSO</span></div>
+    <div class="level1"><span class="xref">Object</span></div>
+    <div class="level2"><span class="xref">ScriptableObject</span></div>
+    <div class="level3"><span class="xref">MapGenSettingsSO</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoraGames.html">MoraGames</a>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a></h6>
+  <h6><strong>Namespace</strong>: <span class="xref">MoraGames</span>.<a class="xref" href="MoraGames.MapGen.html">MapGen</a></h6>
   <h6><strong>Assembly</strong>: MoraMapGen.Runtime.dll</h6>
   <h5 id="MoraGames_MapGen_MapGenSettingsSO_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MapGenSettingsSO : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;New Map Gen Settings&quot;, menuName = &quot;MoraMapGen/Map Gen Settings Asset&quot;)]
+public class MapGenSettingsSO : ScriptableObject</code></pre>
   </div>
   <h5 id="MoraGames_MapGen_MapGenSettingsSO_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Configure map size, room creation mode, corridor design, randomness, and other
 generation parameters through this asset. Create via Assets &gt; Create &gt; MoraMapGen &gt; Map Gen Settings Asset.</p>
 </div>
-  <h3 id="constructors">Constructors
-</h3>
-
-
-  <a id="MoraGames_MapGen_MapGenSettingsSO__ctor_" data-uid="MoraGames.MapGen.MapGenSettingsSO.#ctor*"></a>
-  <h4 id="MoraGames_MapGen_MapGenSettingsSO__ctor" data-uid="MoraGames.MapGen.MapGenSettingsSO.#ctor">MapGenSettingsSO()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MapGenSettingsSO()</code></pre>
-  </div>
   <h3 id="properties">Properties
 </h3>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_AreaOptions_" data-uid="MoraGames.MapGen.MapGenSettingsSO.AreaOptions*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_AreaOptions" data-uid="MoraGames.MapGen.MapGenSettingsSO.AreaOptions">AreaOptions</h4>
   <div class="markdown level1 summary"><p>The area options asset defining room and corridor definitions and placement rules.</p>
@@ -139,8 +128,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_CFSPercent_" data-uid="MoraGames.MapGen.MapGenSettingsSO.CFSPercent*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_CFSPercent" data-uid="MoraGames.MapGen.MapGenSettingsSO.CFSPercent">CFSPercent</h4>
   <div class="markdown level1 summary"><p>Percentage of empty tiles to fill with corridors when CorridorsFillSpace is enabled.</p>
@@ -165,8 +152,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_ChunkMergesMinMax_" data-uid="MoraGames.MapGen.MapGenSettingsSO.ChunkMergesMinMax*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_ChunkMergesMinMax" data-uid="MoraGames.MapGen.MapGenSettingsSO.ChunkMergesMinMax">ChunkMergesMinMax</h4>
   <div class="markdown level1 summary"><p>Min/max range for number of chunk merge operations in Chunks mode.</p>
@@ -191,8 +176,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_ChunkRoomConnectionMode_" data-uid="MoraGames.MapGen.MapGenSettingsSO.ChunkRoomConnectionMode*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_ChunkRoomConnectionMode" data-uid="MoraGames.MapGen.MapGenSettingsSO.ChunkRoomConnectionMode">ChunkRoomConnectionMode</h4>
   <div class="markdown level1 summary"><p>The connection strategy for linking rooms in Chunks mode.</p>
@@ -217,8 +200,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_ChunkSizeMinMax_" data-uid="MoraGames.MapGen.MapGenSettingsSO.ChunkSizeMinMax*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_ChunkSizeMinMax" data-uid="MoraGames.MapGen.MapGenSettingsSO.ChunkSizeMinMax">ChunkSizeMinMax</h4>
   <div class="markdown level1 summary"><p>Min and max dimensions for chunk size when using Chunks generation mode.</p>
@@ -243,8 +224,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_ClampArea_" data-uid="MoraGames.MapGen.MapGenSettingsSO.ClampArea*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_ClampArea" data-uid="MoraGames.MapGen.MapGenSettingsSO.ClampArea">ClampArea</h4>
   <div class="markdown level1 summary"><p>Whether to clamp the map area within specified min/max.</p>
@@ -269,8 +248,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_ConsolidatePaths_" data-uid="MoraGames.MapGen.MapGenSettingsSO.ConsolidatePaths*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_ConsolidatePaths" data-uid="MoraGames.MapGen.MapGenSettingsSO.ConsolidatePaths">ConsolidatePaths</h4>
   <div class="markdown level1 summary"><p>Whether to terminate corridor paths early when they reach a tile that already connects to the desired destination. (Helps reduce clutter.)</p>
@@ -295,8 +272,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_CorridorsFillSpace_" data-uid="MoraGames.MapGen.MapGenSettingsSO.CorridorsFillSpace*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_CorridorsFillSpace" data-uid="MoraGames.MapGen.MapGenSettingsSO.CorridorsFillSpace">CorridorsFillSpace</h4>
   <div class="markdown level1 summary"><p>Whether to fill empty space with additional corridors.</p>
@@ -321,8 +296,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_DeadEndsReductionFactor_" data-uid="MoraGames.MapGen.MapGenSettingsSO.DeadEndsReductionFactor*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_DeadEndsReductionFactor" data-uid="MoraGames.MapGen.MapGenSettingsSO.DeadEndsReductionFactor">DeadEndsReductionFactor</h4>
   <div class="markdown level1 summary"><p>Ratio (0-1) of dead-end corridors to remove by connecting or shortening.</p>
@@ -347,8 +320,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_DirectRoutes_" data-uid="MoraGames.MapGen.MapGenSettingsSO.DirectRoutes*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_DirectRoutes" data-uid="MoraGames.MapGen.MapGenSettingsSO.DirectRoutes">DirectRoutes</h4>
   <div class="markdown level1 summary"><p>Whether to use the most direct routes when connecting rooms. (Use the closest two tiles from each room, rather than a random one from each.)</p>
@@ -373,8 +344,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_DoorPlacementMode_" data-uid="MoraGames.MapGen.MapGenSettingsSO.DoorPlacementMode*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_DoorPlacementMode" data-uid="MoraGames.MapGen.MapGenSettingsSO.DoorPlacementMode">DoorPlacementMode</h4>
   <div class="markdown level1 summary"><p>The door placement strategy (Whole or Half doors).</p>
@@ -399,8 +368,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_ExactMapSizeSetting_" data-uid="MoraGames.MapGen.MapGenSettingsSO.ExactMapSizeSetting*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_ExactMapSizeSetting" data-uid="MoraGames.MapGen.MapGenSettingsSO.ExactMapSizeSetting">ExactMapSizeSetting</h4>
   <div class="markdown level1 summary"><p>The exact map size in tiles when UseRandomMapSize is false.</p>
@@ -425,8 +392,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_HybridChunksFactor_" data-uid="MoraGames.MapGen.MapGenSettingsSO.HybridChunksFactor*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_HybridChunksFactor" data-uid="MoraGames.MapGen.MapGenSettingsSO.HybridChunksFactor">HybridChunksFactor</h4>
   <div class="markdown level1 summary"><p>Ratio (0-1) of chunks that use RoomShape templates in Hybrid mode.</p>
@@ -451,8 +416,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_LargeRoomSize_" data-uid="MoraGames.MapGen.MapGenSettingsSO.LargeRoomSize*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_LargeRoomSize" data-uid="MoraGames.MapGen.MapGenSettingsSO.LargeRoomSize">LargeRoomSize</h4>
   <div class="markdown level1 summary"><p>The minimum tile count for a room to be considered &quot;large&quot;.</p>
@@ -477,8 +440,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_MapPlayAreaMinMax_" data-uid="MoraGames.MapGen.MapGenSettingsSO.MapPlayAreaMinMax*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_MapPlayAreaMinMax" data-uid="MoraGames.MapGen.MapGenSettingsSO.MapPlayAreaMinMax">MapPlayAreaMinMax</h4>
   <div class="markdown level1 summary"><p>The actual playable area bounds in tiles (calculated at runtime).</p>
@@ -503,8 +464,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_MinCorridors_" data-uid="MoraGames.MapGen.MapGenSettingsSO.MinCorridors*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_MinCorridors" data-uid="MoraGames.MapGen.MapGenSettingsSO.MinCorridors">MinCorridors</h4>
   <div class="markdown level1 summary"><p>Minimum number of corridors based on required unique corridor areas.</p>
@@ -529,8 +488,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_MinRooms_" data-uid="MoraGames.MapGen.MapGenSettingsSO.MinRooms*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_MinRooms" data-uid="MoraGames.MapGen.MapGenSettingsSO.MinRooms">MinRooms</h4>
   <div class="markdown level1 summary"><p>Minimum number of rooms to generate (or required unique rooms, whichever is greater).</p>
@@ -555,8 +512,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_NearestRoomTieThreshold_" data-uid="MoraGames.MapGen.MapGenSettingsSO.NearestRoomTieThreshold*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_NearestRoomTieThreshold" data-uid="MoraGames.MapGen.MapGenSettingsSO.NearestRoomTieThreshold">NearestRoomTieThreshold</h4>
   <div class="markdown level1 summary"><p>Distance threshold in tiles for considering rooms equally close when selecting connection targets.</p>
@@ -581,8 +536,30 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
+  <a id="MoraGames_MapGen_MapGenSettingsSO_NestModulesUnderNamedContainer_" data-uid="MoraGames.MapGen.MapGenSettingsSO.NestModulesUnderNamedContainer*"></a>
+  <h4 id="MoraGames_MapGen_MapGenSettingsSO_NestModulesUnderNamedContainer" data-uid="MoraGames.MapGen.MapGenSettingsSO.NestModulesUnderNamedContainer">NestModulesUnderNamedContainer</h4>
+  <div class="markdown level1 summary"><p>If true, tile modules are spawned as children of a container GameObject that has the GridPos/SubgridPos name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool NestModulesUnderNamedContainer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="MoraGames_MapGen_MapGenSettingsSO_RandomMapDimensionsMinMax_" data-uid="MoraGames.MapGen.MapGenSettingsSO.RandomMapDimensionsMinMax*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_RandomMapDimensionsMinMax" data-uid="MoraGames.MapGen.MapGenSettingsSO.RandomMapDimensionsMinMax">RandomMapDimensionsMinMax</h4>
   <div class="markdown level1 summary"><p>The actual random map dimension range in tiles (calculated at runtime).</p>
@@ -607,8 +584,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_RandomSeed_" data-uid="MoraGames.MapGen.MapGenSettingsSO.RandomSeed*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_RandomSeed" data-uid="MoraGames.MapGen.MapGenSettingsSO.RandomSeed">RandomSeed</h4>
   <div class="markdown level1 summary"><p>The random seed to use for map generation (if RandomizeSeed is false).</p>
@@ -633,8 +608,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_RandomizeSeed_" data-uid="MoraGames.MapGen.MapGenSettingsSO.RandomizeSeed*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_RandomizeSeed" data-uid="MoraGames.MapGen.MapGenSettingsSO.RandomizeSeed">RandomizeSeed</h4>
   <div class="markdown level1 summary"><p>Whether to generate a new random seed for each map generation.</p>
@@ -659,8 +632,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_RemoveSmallRooms_" data-uid="MoraGames.MapGen.MapGenSettingsSO.RemoveSmallRooms*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_RemoveSmallRooms" data-uid="MoraGames.MapGen.MapGenSettingsSO.RemoveSmallRooms">RemoveSmallRooms</h4>
   <div class="markdown level1 summary"><p>Whether to remove rooms smaller than SmallRoomSize.</p>
@@ -685,8 +656,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_RoomCreationMode_" data-uid="MoraGames.MapGen.MapGenSettingsSO.RoomCreationMode*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_RoomCreationMode" data-uid="MoraGames.MapGen.MapGenSettingsSO.RoomCreationMode">RoomCreationMode</h4>
   <div class="markdown level1 summary"><p>The generation strategy to use (Random, Chunks, or Hybrid).</p>
@@ -711,8 +680,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_RoomShapesPath_" data-uid="MoraGames.MapGen.MapGenSettingsSO.RoomShapesPath*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_RoomShapesPath" data-uid="MoraGames.MapGen.MapGenSettingsSO.RoomShapesPath">RoomShapesPath</h4>
   <div class="markdown level1 summary"><p>Resources folder path for RoomShapeSO assets.</p>
@@ -737,8 +704,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_SaveAdjustedSizes_" data-uid="MoraGames.MapGen.MapGenSettingsSO.SaveAdjustedSizes*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_SaveAdjustedSizes" data-uid="MoraGames.MapGen.MapGenSettingsSO.SaveAdjustedSizes">SaveAdjustedSizes</h4>
   <div class="markdown level1 summary"><p>Whether to permanently save runtime size adjustments back to the asset.</p>
@@ -763,8 +728,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_SmallRoomSize_" data-uid="MoraGames.MapGen.MapGenSettingsSO.SmallRoomSize*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_SmallRoomSize" data-uid="MoraGames.MapGen.MapGenSettingsSO.SmallRoomSize">SmallRoomSize</h4>
   <div class="markdown level1 summary"><p>The maximum tile count for a room to be considered &quot;small&quot;.</p>
@@ -789,8 +752,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_SplitLargeRooms_" data-uid="MoraGames.MapGen.MapGenSettingsSO.SplitLargeRooms*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_SplitLargeRooms" data-uid="MoraGames.MapGen.MapGenSettingsSO.SplitLargeRooms">SplitLargeRooms</h4>
   <div class="markdown level1 summary"><p>Whether to subdivide rooms larger than LargeRoomSize.</p>
@@ -815,8 +776,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_UseExteriorCeiling_" data-uid="MoraGames.MapGen.MapGenSettingsSO.UseExteriorCeiling*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_UseExteriorCeiling" data-uid="MoraGames.MapGen.MapGenSettingsSO.UseExteriorCeiling">UseExteriorCeiling</h4>
   <div class="markdown level1 summary"><p>Whether to place ceiling modules over exterior (unwalkable) tiles.</p>
@@ -841,8 +800,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_UseInteriorCeiling_" data-uid="MoraGames.MapGen.MapGenSettingsSO.UseInteriorCeiling*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_UseInteriorCeiling" data-uid="MoraGames.MapGen.MapGenSettingsSO.UseInteriorCeiling">UseInteriorCeiling</h4>
   <div class="markdown level1 summary"><p>Whether to place ceiling modules over interior (walkable) tiles.</p>
@@ -867,8 +824,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_UseRandomMapSize_" data-uid="MoraGames.MapGen.MapGenSettingsSO.UseRandomMapSize*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_UseRandomMapSize" data-uid="MoraGames.MapGen.MapGenSettingsSO.UseRandomMapSize">UseRandomMapSize</h4>
   <div class="markdown level1 summary"><p>Whether to use a random map size within RandomMapDimensionsMinMax range.</p>
@@ -895,8 +850,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
   </table>
   <h3 id="methods">Methods
 </h3>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_DebugRandomizeAll_" data-uid="MoraGames.MapGen.MapGenSettingsSO.DebugRandomizeAll*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_DebugRandomizeAll" data-uid="MoraGames.MapGen.MapGenSettingsSO.DebugRandomizeAll">DebugRandomizeAll()</h4>
   <div class="markdown level1 summary"><p>Randomizes all generation settings for testing and variety.</p>
@@ -909,35 +862,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
   <h5 id="MoraGames_MapGen_MapGenSettingsSO_DebugRandomizeAll_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Used for debug/testing purposes. Only called when the debug option is enabled.</p>
 </div>
-
-
-  <a id="MoraGames_MapGen_MapGenSettingsSO_GetActualMapSize_" data-uid="MoraGames.MapGen.MapGenSettingsSO.GetActualMapSize*"></a>
-  <h4 id="MoraGames_MapGen_MapGenSettingsSO_GetActualMapSize" data-uid="MoraGames.MapGen.MapGenSettingsSO.GetActualMapSize">GetActualMapSize()</h4>
-  <div class="markdown level1 summary"><p>Gets the actual map size to use for generation based on current settings.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2Int GetActualMapSize()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector2Int</span></td>
-        <td><p>Map dimensions in tiles, including the border.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_GetSettingsInfoString_" data-uid="MoraGames.MapGen.MapGenSettingsSO.GetSettingsInfoString*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_GetSettingsInfoString" data-uid="MoraGames.MapGen.MapGenSettingsSO.GetSettingsInfoString">GetSettingsInfoString()</h4>
   <div class="markdown level1 summary"><p>Gets a formatted string containing all current settings for logging/debugging.</p>
@@ -963,8 +887,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
       </tr>
     </tbody>
   </table>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_IncreaseMapSize_" data-uid="MoraGames.MapGen.MapGenSettingsSO.IncreaseMapSize*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_IncreaseMapSize" data-uid="MoraGames.MapGen.MapGenSettingsSO.IncreaseMapSize">IncreaseMapSize()</h4>
   <div class="markdown level1 summary"><p>Increases map size settings when generation fails due to insufficient space.</p>
@@ -978,8 +900,6 @@ generation parameters through this asset. Create via Assets &gt; Create &gt; Mor
   <div class="markdown level1 remarks"><p>Called automatically during generation retries. If SaveAdjustedSizes is true,
 the settings asset will be modified to prevent future failures.</p>
 </div>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_Randomize_" data-uid="MoraGames.MapGen.MapGenSettingsSO.Randomize*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_Randomize" data-uid="MoraGames.MapGen.MapGenSettingsSO.Randomize">Randomize()</h4>
   <div class="markdown level1 summary"><p>Randomizes settings that have randomization enabled.</p>
@@ -993,8 +913,6 @@ the settings asset will be modified to prevent future failures.</p>
   <div class="markdown level1 remarks"><p>Only randomizes values with their corresponding randomization toggle enabled.
 Called before each map generation.</p>
 </div>
-
-
   <a id="MoraGames_MapGen_MapGenSettingsSO_ResetTempSizes_" data-uid="MoraGames.MapGen.MapGenSettingsSO.ResetTempSizes*"></a>
   <h4 id="MoraGames_MapGen_MapGenSettingsSO_ResetTempSizes" data-uid="MoraGames.MapGen.MapGenSettingsSO.ResetTempSizes">ResetTempSizes()</h4>
   <div class="markdown level1 summary"><p>Resets temporary size values to their configured defaults.</p>
@@ -1014,10 +932,6 @@ attempts don't carry over unless SaveAdjustedSizes is enabled.</p>
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

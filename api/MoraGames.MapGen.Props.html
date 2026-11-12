@@ -85,6 +85,9 @@
     <h3 id="classes">
 Classes
 </h3>
+      <h4><a class="xref" href="MoraGames.MapGen.Props.MapGameObjectPlacement.html">MapGameObjectPlacement</a></h4>
+      <section><p>A <a class="xref" href="MoraGames.MapGen.Advanced.IMapGenPostProcess.html">IMapGenPostProcess</a> that lets you specify where to place arbitrary quantities of prefabs when the map is generated.</p>
+</section>
       <h4><a class="xref" href="MoraGames.MapGen.Props.ProceduralPropSpotOffsetsSO.html">ProceduralPropSpotOffsetsSO</a></h4>
       <section><p>ScriptableObject asset defining position variance for Procedural Prop Spots.</p>
 </section>
@@ -99,6 +102,9 @@ Classes
 </section>
       <h4><a class="xref" href="MoraGames.MapGen.Props.PropPlacement.html">PropPlacement</a></h4>
       <section><p>Component that handles prop placement as a post-processing step after map generation.</p>
+</section>
+      <h4><a class="xref" href="MoraGames.MapGen.Props.PropPlacementHelpers.html">PropPlacementHelpers</a></h4>
+      <section><p>Shared helpers for calculating and performing prop placement.</p>
 </section>
       <h4><a class="xref" href="MoraGames.MapGen.Props.PropPlacementVolume.html">PropPlacementVolume</a></h4>
       <section><p>Uses a collider to temporarily block any subsequent props from being placed inside the collider, then destroys itself and the collider on Start.</p>
@@ -115,6 +121,28 @@ Classes
       <h4><a class="xref" href="MoraGames.MapGen.Props.ReflectionProbePlacement.html">ReflectionProbePlacement</a></h4>
       <section><p>Post-processing component that automatically places Unity ReflectionProbes in generated maps.</p>
 </section>
+    <h3 id="structs">
+Structs
+</h3>
+      <h4><a class="xref" href="MoraGames.MapGen.Props.PropPlacementHelpers.PlacementPose.html">PropPlacementHelpers.PlacementPose</a></h4>
+      <section><p>A fully resolved world-space pose for a prop.</p>
+</section>
+    <h3 id="enums">
+Enums
+</h3>
+      <h4><a class="xref" href="MoraGames.MapGen.Props.MapGameObjectPlacement.CorridorProceduralPropSpots.html">MapGameObjectPlacement.CorridorProceduralPropSpots</a></h4>
+      <section></section>
+      <h4><a class="xref" href="MoraGames.MapGen.Props.MapGameObjectPlacement.PlacementAreas.html">MapGameObjectPlacement.PlacementAreas</a></h4>
+      <section><p>Specifies which kinds of areas prefabs can be placed in.</p>
+</section>
+      <h4><a class="xref" href="MoraGames.MapGen.Props.MapGameObjectPlacement.PlacementMethod.html">MapGameObjectPlacement.PlacementMethod</a></h4>
+      <section><p>Specifies where inside the selected areas objects are placed.</p>
+</section>
+      <h4><a class="xref" href="MoraGames.MapGen.Props.MapGameObjectPlacement.RoomProceduralPropSpots.html">MapGameObjectPlacement.RoomProceduralPropSpots</a></h4>
+      <section></section>
+      <h4><a class="xref" href="MoraGames.MapGen.Props.MapGameObjectPlacement.SelectionPolicy.html">MapGameObjectPlacement.SelectionPolicy</a></h4>
+      <section><p>Determines how many objects are placed and how prefabs and areas are chosen.</p>
+</section>
 
 
 </article>
@@ -122,10 +150,6 @@ Classes
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

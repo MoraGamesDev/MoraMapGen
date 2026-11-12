@@ -76,7 +76,7 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="create-your-own-mapgen-post-processes">
 <h1 id="create-your-own-mapgen-post-processes">Create Your Own MapGen Post-Processes</h1>
 
 <p>If you need something to happen before the map is considered “ready”, you can have your scripts implement the IMapGenPostProcess interface.
@@ -92,6 +92,7 @@ A MapGen Post-Process component will automatically be triggered to do its thing 
 <li><strong>AfterNavMesh</strong> post-processes are triggered</li>
 </ol>
 <h2 id="imapgenpostprocess-interface">IMapGenPostProcess interface</h2>
+<p><a class="xref" href="../../api/MoraGames.MapGen.Advanced.IMapGenPostProcess.html">See API documentation for IMapGenPostProcess</a></p>
 <h3 id="onmapbakedbakedmap-bakedmap">OnMapBaked(BakedMap bakedMap)</h3>
 <p>Is called by MoraMapGen when the map is baked. Passes the resulting BakedMap object.</p>
 <h3 id="reset">Reset()</h3>
@@ -104,13 +105,6 @@ A MapGen Post-Process component will automatically be triggered to do its thing 
 
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/BlackOpsBen/Nemesis/blob/main/MoraMapGen_Documentation/docs/post-processes/create-your-own-mapgen-post-processes.md/#L1" class="contribution-link">Edit this page</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In this article</h5>
                 <div></div>

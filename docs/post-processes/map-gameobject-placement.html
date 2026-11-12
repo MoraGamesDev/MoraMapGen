@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Map GameObject Placement | MoraMapGen </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Map GameObject Placement | MoraMapGen ">
+    
+    
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="MoraMapGen">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="map-gameobject-placement">
+<h1 id="map-gameobject-placement">Map GameObject Placement</h1>
+
+<p>The <code>MapGameObjectPlacement</code> component is a <a href="../post-processes.html">MapGenPostProcess</a> for placing prefab instances in your map. As an alternative to the normal <a href="prop-placement.html">Prop Placement</a> system, this component allows you to place specific objects in specific quantities independent of AreaDefinitions or TileModuleDefinitions.</p>
+<p><img src="../../images/post-processes/map-gameobject-placement-inspector.png" alt="Map GameObject Placement inspector"></p>
+<h2 id="setup">Setup</h2>
+<ol>
+<li>Add <code>MapGameObjectPlacement</code> to the same GameObject as your <code>MoraMapGen</code> component.</li>
+<li>Add one or more prefabs you want to place to the <strong>Prefabs</strong> list.</li>
+<li>Choose the <strong>Phase</strong>, <strong>Selection Policy</strong>, <strong>Placement Areas</strong>, and <strong>Placement Method</strong>, then configure the additional fields shown for those choices.</li>
+</ol>
+<p>This component will run automatically whenever you generate a map, whether in editor or at runtime. The timing is determined by it's <strong>Phase</strong> selection.</p>
+<h2 id="choose-how-many-objects-to-target">Choose how many objects to target</h2>
+<p><strong>Quantity</strong> is the requested count interpreted by the <code>Selection Policy</code>. It is a target, not a guarantee. A placement can fail due to collider overlap, or due to there simply not being enough available positions for it.</p>
+<table>
+<thead>
+<tr>
+<th>Selection Policy</th>
+<th>Description</th>
+<th>Distribution Modes used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TargetQuantityOfEach</code></td>
+<td>Try to place the requested quantity of each prefab in any of the eligible areas.</td>
+<td>Area distribution</td>
+</tr>
+<tr>
+<td><code>TargetQuantityPerArea</code></td>
+<td>Try to place the requested quantity of prefabs in each eligible area.</td>
+<td>Prefab distribution</td>
+</tr>
+<tr>
+<td><code>TargetQuantityTotal</code></td>
+<td>Try to place the requested total of prefabs in any of the eligible areas.</td>
+<td>Prefab and Area distributions</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Some combinations of settings result in the Quanity being forced to <code>0</code> because there can only ever be one valid spot per area with those settings.</p>
+</div>
+<h2 id="choose-areas-and-candidate-positions">Choose areas and candidate positions</h2>
+<p><strong>Placement Areas</strong> specifies whether to place prefabs in <code>Rooms</code>, <code>Corridors</code>, or <code>Both</code>.</p>
+<p><strong>Placement Method</strong> specifies how to place prefabs in a given area.</p>
+<ul>
+<li><strong>Random Grid Space</strong>: selects a random tile in the area and places a prefab at the center world position of that tile.</li>
+<li><strong>Central Grid Space</strong>: places a prefab in the center of the tile that is closest to the middle of the area.</li>
+<li><strong>Prop Spots</strong> places a prefab on one of the relevant <a href="prop-placement/prop-spots.html">Prop Spots</a> in the area that matches the specified <a href="prop-placement/prop-channels.html">Prop Channel</a>.</li>
+<li><strong>Procedural Prop Spots</strong>: places a prefab on one of the relevant <a href="prop-placement/procedural-prop-spots.html">Procedural Prop Spots</a> in the area that matches the relevant <code>Room Procedural Prop Spots</code> and <code>Corridor Procedural Prop Spots</code> selections.</li>
+</ul>
+<p><strong>Rotation Settings</strong> is an optional <a href="prop-placement/prop-rotation-settings.html">Prop Rotation Settings</a> asset for additional random rotation to be applied relative to the placement's base orientation.</p>
+<h3 id="additional-parameters">Additional Parameters</h3>
+<p>Each Placement Method may expost other parameters:</p>
+<p><strong>Orientation Mode</strong> determines the base orientation for a prefab when placing it using the <code>Random Grid Space</code> and <code>Central Grid Space</code> Placement Methods.</p>
+<ul>
+<li><strong>Constant</strong> lets you specify a Heading in degrees.</li>
+<li><strong>Random</strong> picks a heading at random between 0-360 degrees.</li>
+<li><strong>Random Cardinal Direction</strong> picks a random 90 degree increment heading. (Equivalent to North, East, South, or West.)</li>
+<li><strong>Farthest Distance</strong> picks the cardinal direction that looks down the farthest traversable distance before hitting a wall. (Good for preventing a prefab from being placed facing a wall.)</li>
+</ul>
+<p><strong>Procedural Prop Spot Offsets</strong> is an optional <a href="prop-placement/procedural-prop-spot-offsets.html">Procedural Prop Spot Offsets</a> asset for additional random positional offset to be applied relative to the spot's position. Note that this also applies when using <code>Random Grid Space</code> or <code>Central Grid Space</code> as well as the <code>Procedural Prop Spots</code> Placement Method.</p>
+<p><strong>Prop Spot Channel</strong> is required for determining which Prop Spots can be used. Any of your module prefabs in the map that have a Prop Spot with the same Prop Channel assigned will be a match.</p>
+<p><strong>Offset Multiplier</strong> multiplies the offset magnitude applied. A value of 1 is essentially unchanged. Anything smaller than 1 diminishes the offset magnitude.</p>
+<p><strong>Room Procedural Prop Spots</strong> specifies which Procedural Prop Spots to use when placing in Rooms.</p>
+<ul>
+<li><strong>Center</strong> is the centroid of the largest unbroken rectangular space in the given area. Note it is not locked to the center of a grid space like <code>Central Grid Space</code> is.</li>
+<li><strong>Corners</strong> are any concave corners inside the room.</li>
+<li><strong>Door Spaces</strong> are any grid spaces that have a door connecting to another area.</li>
+</ul>
+<p><strong>Corridor Procedural Prop Spots</strong> specifies which Procedural Prop Spots to use when placing in Corridors.</p>
+<ul>
+<li><strong>Straights</strong> are any tiles where the segment of corridor does not turn or have any intersections.</li>
+<li><strong>Corners</strong> are any tiles where the corridor does a 90 degree (&quot;L&quot; shaped) turn without any intersections.</li>
+<li><strong>Intersections</strong> are tiles with corridor connections on 3 or 4 sides, such as a &quot;T&quot; or &quot;X&quot; intersection.</li>
+</ul>
+<h2 id="distribution-modes">Distribution Modes</h2>
+<p>Depending on your chosen <code>Selection Policy</code>, prefabs and areas may be selected at random. When that is the case, you can specify a distribution mode to use.</p>
+<p><strong>Uniform</strong> is like a single die roll; every option is just as likely as any other.</p>
+<p><img src="../../images/post-processes/distribution-mode-uniform.png" alt="Uniform distribution"></p>
+<p><strong>Normal</strong> is more like rolling 2 dice; a <code>7</code> is <em>way</em> more likely than a <code>12</code>. Options in the middle are much more likely to be selected, while options toward the extremes are exponentially less likely. The <strong>Spread Factor</strong> lets you control how tight the bell curve is.</p>
+<p><img src="../../images/post-processes/distribution-mode-normal.png" alt="Normal distribution"></p>
+<p><strong>Biased</strong> and <strong>Biased Flipped</strong> is weighted heavily to one extreme. The <strong>Bias Strength</strong> lets you control how heavily biased it is.</p>
+<p><img src="../../images/post-processes/distribution-mode-biased.png" alt="Biased and Biased Flipped distributions"></p>
+<p><strong>Shuffle And Deal</strong> is like dealing cards. Distribution is as equal as possible. Some options might be selected at most 1 more time than the others.</p>
+<p><img src="../../images/post-processes/distribution-mode-shuffle.png" alt="Shuffle And Deal distribution"></p>
+<h2 id="placement-overlap">Placement Overlap</h2>
+<p>When a prefab is placed, it is checked for any collider overlap with any objects that were already in the scene before it. If it overlaps by any amount more than the <strong>Overlap Tolerance</strong>, that placement is canceled and it will be attempted with a different available spot, if possible.</p>
+<h2 id="demo-and-examples">Demo and Examples</h2>
+<p>You can see this in action in the <code>MapGameObjectPlacement Demo</code> scene located in <code>MoraGames/MoraMapGen/Demo/Scenes/Advanced Demo Scenes</code>.</p>
+<p>To visualize the difference between the Selection Policies, here are some examples using 2 different prefabs, a green and a yellow one, with Placement Areas set to &quot;Both&quot; and Quantity set to 3:</p>
+<h3 id="target-quantity-of-each">Target Quantity of Each</h3>
+<p>3 Green and 3 Yellow prefabs are placed:</p>
+<p><img src="../../images/post-processes/mapgameobjectplacement-target-quantity-of-each-example.png" alt="Target Quantity of Each"></p>
+<h3 id="target-quantity-per-area">Target Quantity Per Area</h3>
+<p>3 prefabs selected at random are placed in each Room area:</p>
+<p><img src="../../images/post-processes/mapgameobjectplacement-target-quantity-per-area-example.png" alt="Target Quantity Per Area"></p>
+<h2 id="target-quantity-total">Target Quantity Total</h2>
+<p>Only 3 prefabs total, selected randomly, are placed in the entire map.</p>
+<p><img src="../../images/post-processes/mapgameobjectplacement-target-quantity-total-example.png" alt="Target Quantity Total"></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
