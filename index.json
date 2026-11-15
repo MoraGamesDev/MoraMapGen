@@ -372,7 +372,7 @@
   "docs/editor-overlays/area-finder.html": {
     "href": "docs/editor-overlays/area-finder.html",
     "title": "Area Finder | MoraMapGen",
-    "summary": "Area Finder The Area Finder overlay makes it easy to quickly focus your Scene View on a specific area in your generated map. Accessing the Overlay To add the Area Finder overlay, click the 3-dots button in the top right corner of the Scene View, then select Overlays/Overlay Menu. The in the Overlay Menu click the checkbox to enable Area Finder. Using the Overlay When you've generated a map, if you don't see a list of area names, click the Refresh Button. Then you can click on the area buttons to focus the scene view on any area."
+    "summary": "Area Finder The Area Finder overlay makes it easy to quickly focus your Scene View on a specific area in your generated map. Accessing the Overlay To add the Area Finder overlay, click the 3-dots button in the top right corner of the Scene View, then select Overlays/Overlay Menu. The in the Overlay Menu click the checkbox to enable Area Finder. Using the Overlay When you've generated a map, if you don't see a list of area names, click the Refresh Button. Then you can click on the area buttons to focus the scene view on any area. Red buttons are Rooms, and black buttons are Corridors."
   },
   "docs/editor-overlays/moramapgen-shortcuts.html": {
     "href": "docs/editor-overlays/moramapgen-shortcuts.html",
